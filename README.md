@@ -21,7 +21,7 @@ The main purpose of this project is to provide users with a more accurate and re
 ### Dataset
 - **Source:** [DiseaseSymptom Knowledge Base (DSKB)](https://people.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html)
 - **Description:** The DSKB dataset contains relationships between diseases and symptoms. This structured data provides a rich source of labeled data for supervised learning.
-- **Size:** Over 15000 records 
+- **Size:** Over 150 different dieseases and their symptoms 
 
 ### Questions to Address
 - Which symptoms are most strongly associated with specific diseases?
