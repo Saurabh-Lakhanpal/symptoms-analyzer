@@ -1,7 +1,7 @@
-# Disease Predictor Project Proposal
+# Symptom Analyzer
 
 ### Project Title
-Disease Predictor: A Machine Learning Model for Predicting Diseases Based on Symptoms
+Symptom Analyzer: A Machine Learning Model for Predicting Diseases Based on Symptoms
 
 ### Group Members
 - Saurabh Lakhanpal, Evan Gowans, Melanie Liao
