@@ -82,5 +82,4 @@ The main purpose of this project is to provide users with a more accurate and re
 
 ### References
 - DiseaseSymptomKB: [Dataset Link](https://people.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html)
-- Scikit-learn Documentation: [https://scikit-learn.org/](https://scikit-learn.org/)
-- Plotl
+
