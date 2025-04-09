@@ -28,27 +28,28 @@ html, body {
     transform: translateX(-50%);
     font-size: 3em;
     font-weight: bold;
-    color: #163a5d;
-    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5); 
+    color: #27CCCC;
+    text-shadow: 3px 3px 5px #032580; 
 }
 
 .search-section {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .search-section input {
     width: 250px;
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 1em;
     border-radius: 5px;
     border: none;
+    text-align: center;
 }
 
 .cta {
     width: 250px;
     padding: 12px;
     font-size: 1.2em;
-    background-color: #0074E4;
+    background-color: #06146B;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
     color: white;
     border: none;
@@ -63,7 +64,8 @@ html, body {
     bottom: 60px;
     width: 300px;
     height: 80vh;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #27CCCC;
+    opacity: 0.9;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -77,12 +79,13 @@ html, body {
     padding: 12px;
     font-size: 1.2em;
     background-color: white;
-    color: black;
+    color: #032580;
     border: none;
     border-radius: 5px;
     margin-bottom: 60px;
     margin-top: 60px;
-    height: 200%;
+    height: 220%;
+    text-align: center;
 }
 
 .results-section {
@@ -129,7 +132,8 @@ html, body {
 .related-symptoms {
     font-size: 1.2em;
     width: 70%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #27CCCC;
+    opacity: 0.9;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -139,28 +143,33 @@ html, body {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;   
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+    text-decoration-color: #06146B;
 }
 
 .matches {
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 10 10 10px black (255, 255, 255, 0.8);
+    border: 3px solid #27CCCC;
+    border-radius: 10px;
+    background-color: #27CCCC;
+
 }
 
 .disease-description {
     width: 100%;
     height: 20%;
-    background-color: #0074E4;
+    background-color: #06146B;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
     color: white;
     text-align: center;
     font-size: 1.2em;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,15 +178,16 @@ html, body {
 .symptoms-box {
     width: 100%;
     height: 80%;
-    background-color: rgba(0, 0, 0, 0.1);
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
-    color: black;
+    background-color: #27CCCC;
+    opacity: 0.9;
+    text-decoration-color: #06146B;
     text-align: center;
     font-size: 1.2em;
     display: flex;
     align-items: top;
     justify-content: left;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     padding: 10px;
+
 }
