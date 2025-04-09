@@ -75,15 +75,15 @@ function clearSuggestions() {
 // Function to add a symptom to the selected list
 function addSelectedSymptom(symptomName) {
     if (!selectedSymptoms.includes(symptomName)) {
-        selectedSymptoms.push(symptomName); // Add symptom to the global array
-        updateSelectedSymptomsUI(); // Update the UI
+        selectedSymptoms.push(symptomName); 
+        updateSelectedSymptomsUI(); 
     }
 }
 
 // Function to remove a symptom from the selected list
 function removeSelectedSymptom(symptomName) {
     selectedSymptoms = selectedSymptoms.filter(symptom => symptom !== symptomName);
-    updateSelectedSymptomsUI(); // Update the UI
+    updateSelectedSymptomsUI(); 
 }
 
 // Function to update the "Selected Symptoms" section dynamically
@@ -107,7 +107,7 @@ function updateSelectedSymptomsUI() {
     document.querySelectorAll('.remove-symptom').forEach(button => {
         button.addEventListener('click', (event) => {
             const symptomToRemove = event.target.getAttribute('data-symptom');
-            removeSelectedSymptom(symptomToRemove); // Remove symptom from the global array
+            removeSelectedSymptom(symptomToRemove); 
         });
     });
 }
@@ -129,8 +129,8 @@ function handleOutsideClick(event) {
     const searchBox = document.getElementById('search');
 
     if (suggestionBox && !suggestionBox.contains(event.target) && event.target !== searchBox) {
-        clearSuggestions(); // Close the dropdown
-        searchBox.value = ""; // Clear the text inside the search input
+        clearSuggestions(); 
+        searchBox.value = ""; 
     }
 }
 

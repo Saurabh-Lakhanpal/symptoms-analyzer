@@ -2,14 +2,14 @@
 
 // Function to fetch matching diseases based on selected symptoms
 async function fetchMatches(selectedSymptoms) {
-    const matchesUrl = `${window.baseUrl}/api.01/matches?symptoms=${selectedSymptoms.join(',')}`; // Create API URL with selected symptoms
+    const matchesUrl = `${window.baseUrl}/api.01/matches?symptoms=${selectedSymptoms.join(',')}`; 
     try {
         const response = await fetch(matchesUrl);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        return data.matches; // Returns the list of matches
+        return data.matches; 
     } catch (error) {
         console.error("Error fetching matches:", error);
         return [];
@@ -43,19 +43,19 @@ function populateRelatedSymptoms(matches) {
 
     // Populate first set of related symptoms
     if (matches[0]) {
-        const list1 = matches[0].Sname.map(createCheckbox).join(' '); // Join with commas
+        const list1 = matches[0].Sname.map(createCheckbox).join(' '); 
         relatedSymptoms1.innerHTML += `<br>${list1}`;
     }
 
     // Populate second set of related symptoms
     if (matches[1]) {
-        const list2 = matches[1].Sname.map(createCheckbox).join(' '); // Join with commas
+        const list2 = matches[1].Sname.map(createCheckbox).join(' '); 
         relatedSymptoms2.innerHTML += `<br>${list2}`;
     }
 
     // Populate third set of related symptoms
     if (matches[2]) {
-        const list3 = matches[2].Sname.map(createCheckbox).join(' '); // Join with commas
+        const list3 = matches[2].Sname.map(createCheckbox).join(' '); 
         relatedSymptoms3.innerHTML += `<br>${list3}`;
     }
 
@@ -75,15 +75,15 @@ function populateRelatedSymptoms(matches) {
 // Function to add a symptom to the selected list
 function addSelectedSymptom(symptomName) {
     if (!selectedSymptoms.includes(symptomName)) {
-        selectedSymptoms.push(symptomName); // Add symptom to the global array
-        updateSelectedSymptomsUI(); // Update the UI
+        selectedSymptoms.push(symptomName); 
+        updateSelectedSymptomsUI(); 
     }
 }
 
 // Function to remove a symptom from the selected list
 function removeSelectedSymptom(symptomName) {
     selectedSymptoms = selectedSymptoms.filter(symptom => symptom !== symptomName);
-    updateSelectedSymptomsUI(); // Update the UI
+    updateSelectedSymptomsUI(); 
 }
 
 // Function to update the "Selected Symptoms" section dynamically
@@ -107,7 +107,7 @@ function updateSelectedSymptomsUI() {
     document.querySelectorAll('.remove-symptom').forEach(button => {
         button.addEventListener('click', (event) => {
             const symptomToRemove = event.target.getAttribute('data-symptom');
-            removeSelectedSymptom(symptomToRemove); // Remove symptom from the global array
+            removeSelectedSymptom(symptomToRemove); 
             
             // Uncheck the associated checkbox if it exists
             const checkbox = document.getElementById(symptomToRemove);
@@ -127,8 +127,8 @@ async function analyzeSymptoms() {
             return;
         }
 
-        const matches = await fetchMatches(selectedSymptoms); // Fetch matches using selected symptoms
-        populateRelatedSymptoms(matches); // Populate the "Related Symptoms" sections
+        const matches = await fetchMatches(selectedSymptoms); 
+        populateRelatedSymptoms(matches); 
     });
 }
 

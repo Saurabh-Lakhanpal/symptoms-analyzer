@@ -29,7 +29,7 @@ html, body {
     font-size: 3em;
     font-weight: bold;
     color: #27CCCC;
-    text-shadow: 3px 3px 5px #032580; 
+    text-shadow: 3px 3px 5px #032580;
 }
 
 .search-section {
@@ -237,6 +237,6 @@ html, body {
 }
 
 .inline-checkbox, .inline-label {
-    display: inline; /* Ensures checkbox and label are inline */
-    margin-right: 5px; /* Adds spacing */
+    display: inline; 
+    margin-right: 5px; 
 }
