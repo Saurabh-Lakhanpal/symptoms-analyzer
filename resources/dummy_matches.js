@@ -1,0 +1,20 @@
+{
+    "matches": [
+      {
+        "Dname": "Hypertensive Disease",
+        "Sname": ["Pain Chest", "Shortness of Breath", "Dizziness", "Asthenia", "Fall", "Syncope", "Vertigo", "Sweating Increased", "Palpitation", "Nausea", "Angina Pectoris", "Pressure Chest"],
+        "frequency": 3363
+      },
+      {
+        "Dname": "Diabetes",
+        "Sname": ["Polyuria", "Polydypsia", "Shortness of Breath", "Pain Chest", "Asthenia", "Nausea", "Orthopnea", "Rale", "Sweating Increased", "Unresponsiveness", "Mental Status Changes", "Vertigo", "Vomiting", "Labored Breathing"],
+        "frequency": 1421
+      },
+      {
+        "Dname": "Depression",
+        "Sname": ["Feeling Suicidal", "Suicidal", "Hallucinations Auditory", "Feeling Hopeless", "Weepiness", "Sleeplessness", "Motor Retardation", "Irritable Mood", "Blackout", "Mood Depressed", "Hallucinations Visual", "Worry", "Agitation", "Tremor", "Intoxication", "Verbal Auditory Hallucinations", "Energy Increased", "Difficulty", "Nightmare", "Unable to Concentrate", "Homelessness"],
+        "frequency": 1337
+      }
+    ]
+  }
+  
