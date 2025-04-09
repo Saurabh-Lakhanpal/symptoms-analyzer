@@ -143,6 +143,7 @@ html, body {
     border-bottom-left-radius: 10px;   
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
     text-decoration-color: #06146B;
+    display: inline;
 }
 
 .matches {
@@ -233,4 +234,9 @@ html, body {
     align-items: center; 
     gap: 10px; 
     margin-bottom: 5px; 
+}
+
+.inline-checkbox, .inline-label {
+    display: inline; /* Ensures checkbox and label are inline */
+    margin-right: 5px; /* Adds spacing */
 }

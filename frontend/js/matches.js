@@ -16,49 +16,47 @@ async function fetchMatches(selectedSymptoms) {
     }
 }
 
-// Function to populate the Related Symptoms sections with checkboxes in list format
+// Function to populate the Related Symptoms sections with checkboxes in comma-separated format
 function populateRelatedSymptoms(matches) {
     const relatedSymptoms1 = document.getElementById('related-symptoms-1');
     const relatedSymptoms2 = document.getElementById('related-symptoms-2');
     const relatedSymptoms3 = document.getElementById('related-symptoms-3');
 
     // Clear previous content
-    relatedSymptoms1.innerHTML = "Related Symptoms :<ul></ul>";
-    relatedSymptoms2.innerHTML = "Related Symptoms :<ul></ul>";
-    relatedSymptoms3.innerHTML = "Related Symptoms :<ul></ul>";
+    relatedSymptoms1.innerHTML = "Related Symptoms: ";
+    relatedSymptoms2.innerHTML = "Related Symptoms: ";
+    relatedSymptoms3.innerHTML = "Related Symptoms: ";
 
-    // Helper function to create checkboxes dynamically within a list
+    // Helper function to create checkbox followed by the symptom name
     function createCheckbox(symptomName) {
         return `
-            <li>
-                <input 
-                    type="checkbox" 
-                    class="symptom-checkbox" 
-                    id="${symptomName}" 
-                    data-symptom="${symptomName}" 
-                    ${selectedSymptoms.includes(symptomName) ? 'checked' : ''}
-                >
-                <label for="${symptomName}">${symptomName}</label>
-            </li>
+            <input 
+                type="checkbox" 
+                class="symptom-checkbox" 
+                id="${symptomName}" 
+                data-symptom="${symptomName}" 
+                ${selectedSymptoms.includes(symptomName) ? 'checked' : ''}
+            >
+            <label for="${symptomName}">${symptomName}</label>
         `;
     }
 
     // Populate first set of related symptoms
     if (matches[0]) {
-        const list1 = matches[0].Sname.map(createCheckbox).join('');
-        relatedSymptoms1.querySelector('ul').innerHTML += list1;
+        const list1 = matches[0].Sname.map(createCheckbox).join(' '); // Join with commas
+        relatedSymptoms1.innerHTML += `<br>${list1}`;
     }
 
     // Populate second set of related symptoms
     if (matches[1]) {
-        const list2 = matches[1].Sname.map(createCheckbox).join('');
-        relatedSymptoms2.querySelector('ul').innerHTML += list2;
+        const list2 = matches[1].Sname.map(createCheckbox).join(' '); // Join with commas
+        relatedSymptoms2.innerHTML += `<br>${list2}`;
     }
 
     // Populate third set of related symptoms
     if (matches[2]) {
-        const list3 = matches[2].Sname.map(createCheckbox).join('');
-        relatedSymptoms3.querySelector('ul').innerHTML += list3;
+        const list3 = matches[2].Sname.map(createCheckbox).join(' '); // Join with commas
+        relatedSymptoms3.innerHTML += `<br>${list3}`;
     }
 
     // Add event listeners for checkboxes to handle changes
@@ -136,3 +134,4 @@ async function analyzeSymptoms() {
 
 // Initialize the functionality
 analyzeSymptoms();
+
