@@ -1,5 +1,4 @@
-#app.py
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 # Flask Setup
@@ -41,10 +40,45 @@ symptoms_data = {
     ]
 }
 
-# Define a route to serve the symptoms data
+# Sample matches data
+matches_data = {
+    "matches": [
+        {
+            "Dname": "Hypertensive Disease",
+            "Sname": ["Pain Chest", "Shortness of Breath", "Dizziness", "Asthenia", "Fall", "Syncope", "Vertigo", "Sweating Increased", "Palpitation", "Nausea", "Angina Pectoris", "Pressure Chest"],
+            "frequency": 3363
+        },
+        {
+            "Dname": "Diabetes",
+            "Sname": ["Polyuria", "Polydypsia", "Shortness of Breath", "Pain Chest", "Asthenia", "Nausea", "Orthopnea", "Rale", "Sweating Increased", "Unresponsiveness", "Mental Status Changes", "Vertigo", "Vomiting", "Labored Breathing"],
+            "frequency": 1421
+        },
+        {
+            "Dname": "Depression",
+            "Sname": ["Feeling Suicidal", "Suicidal", "Hallucinations Auditory", "Feeling Hopeless", "Weepiness", "Sleeplessness", "Motor Retardation", "Irritable Mood", "Blackout"],
+            "frequency": 1337
+        }
+    ]
+}
+
+# Route to serve the symptoms data
 @app.route('/api.01/symptoms', methods=['GET'])
 def get_symptoms():
     return jsonify(symptoms_data)
+
+# Route to serve matches based on selected symptoms
+@app.route('/api.01/matches', methods=['GET'])
+def get_matches():
+    # Capture selected symptoms from the query parameter
+    selected_symptoms = request.args.get('symptoms', "").split(',')
+
+    # Filter matches based on selected symptoms (basic example)
+    filtered_matches = [
+        match for match in matches_data["matches"]
+        if any(symptom in selected_symptoms for symptom in match["Sname"])
+    ]
+
+    return jsonify({"matches": filtered_matches})
 
 if __name__ == '__main__':
     app.run(debug=True)

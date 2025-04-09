@@ -152,8 +152,8 @@ html, body {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    box-shadow: 10 10 10px black (255, 255, 255, 0.8);
-    border: 3px solid #27CCCC;
+    box-shadow: 10 10 10px black (255, 255, 255, 0.9);
+    border: 2px solid #27CCCC;
     border-radius: 10px;
     background-color: #27CCCC;
 
