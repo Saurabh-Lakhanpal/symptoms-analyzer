@@ -84,8 +84,7 @@ html, body {
     border-radius: 5px;
     margin-bottom: 60px;
     margin-top: 60px;
-    height: 220%;
-    text-align: center;
+    text-align: left;
 }
 
 .results-section {
@@ -190,4 +189,48 @@ html, body {
     border-bottom-right-radius: 10px;
     padding: 10px;
 
+}
+
+#suggestions .suggestion-item {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    padding: 5px; 
+    cursor: pointer; 
+}
+
+#suggestions .symptom-checkbox {
+    margin-left: 10px; 
+    width:5%;
+}
+
+/* Style for the remove-symptom (X button) */
+.remove-symptom {
+    background-color: #06146B;
+    color: white; 
+    border: none; 
+    border-radius: 50%; 
+    width: 20px; 
+    height: 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 12px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /
+}
+
+/* Hover effect for the "X" button */
+.remove-symptom:hover {
+    background-color: #27CCCC;
+    transform: scale(1.2); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.selected-symptom {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 5px; 
 }

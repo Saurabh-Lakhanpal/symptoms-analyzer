@@ -1,3 +1,4 @@
+// symptoms.json
 {
     "symptoms": [
       { "symptomID": "C0008031", "Sname": "Pain Chest" },
