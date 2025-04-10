@@ -1,4 +1,4 @@
-1. Acquired Immuno-deficiency Syndrome (AIDS): A chronic, life-threatening condition caused by HIV, weakening the immune system.  
+1. Acquired Immuno-deficiency Syndrome: A chronic, life-threatening condition caused by HIV, weakening the immune system.  
 2. Adenocarcinoma: Cancer originating in glandular tissues, often found in the lungs, colon, or breasts.  
 3. Adhesion: Scar tissue bands forming between organs or tissues, often after surgery or inflammation.  
 4. Chronic Alcoholic Intoxication: Long-term excessive alcohol use causing physical, mental, and organ damage.  
@@ -21,7 +21,7 @@
 21. Carcinoma: A type of cancer originating in epithelial cells, affecting organs like the skin, lungs, or colon.  
 22. Malignant Tumor of Colon: Cancerous growth in the colon, leading to changes in bowel habits and abdominal pain.  
 23. Cellulitis: Bacterial skin infection causing redness, swelling, and pain, often affecting the legs.  
-24. Transient Ischemic Attack (TIA): A brief episode of stroke-like symptoms due to reduced blood flow to the brain.  
+24. Transient Ischemic Attack: A brief episode of stroke-like symptoms due to reduced blood flow to the brain.  
 25. Cholecystitis: Inflammation of the gallbladder, often caused by gallstones, leading to pain and fever.  
 26. Cholelithiasis: The presence of gallstones in the gallbladder, which may cause pain, nausea, or inflammation.  
 27. Colitis: Inflammation of the colon, leading to diarrhea, abdominal pain, and discomfort.  
@@ -45,7 +45,7 @@
 45. Exanthema: Skin rash commonly caused by viral infections, such as measles or chickenpox.  
 46. Gastritis: Inflammation of the stomach lining, causing nausea, pain, and discomfort.  
 47. Gastroenteritis: Intestinal infection causing diarrhea, nausea, and vomiting, often from contaminated food or water.  
-48. Gastroesophageal Reflux Disease (GERD): Condition where stomach acid frequently flows into the esophagus, causing heartburn.  
+48. Gastroesophageal Reflux Disease: Condition where stomach acid frequently flows into the esophagus, causing heartburn.  
 49. Glaucoma: Eye disorder damaging the optic nerve, often linked to increased pressure in the eye.  
 50. Gout: A type of arthritis caused by excessive uric acid, leading to painful joint swelling.  
 51. Failure Heart: A condition where the heart cannot pump sufficient blood to meet the body’s needs.  
@@ -76,7 +76,7 @@
 76. Kidney Failure Acute: Sudden loss of kidney function, requiring immediate medical attention.  
 77. Chronic Kidney Failure: Long-term decline in kidney function, potentially leading to dialysis or transplant.  
 78. Fibroid Tumor: Noncancerous growths in the uterus, causing pain or heavy menstrual bleeding.  
-79. Chronic Obstructive Airway Disease (COPD): Progressive lung disease causing breathing difficulties.  
+79. Chronic Obstructive Airway Disease: Progressive lung disease causing breathing difficulties.  
 80. Lymphatic Diseases: Disorders affecting the lymphatic system, impacting immunity and fluid balance.
 81. Lymphoma: Cancer of the lymphatic system, affecting immune cells and often causing swollen lymph nodes.  
 82. Manic Disorder: A mental condition marked by heightened energy, euphoria, and impulsive behavior.  
@@ -137,7 +137,7 @@
 137. Carcinoma Colon: Cancer of the colon or rectum, affecting bowel function and general health.  
 138. Anxiety State: A condition of excessive fear, worry, or nervousness, affecting daily life and well-being.  
 139. Cardiomyopathy: Disease of the heart muscle, leading to reduced pumping ability and heart failure.  
-140. Sepsis (Invertebrate): Life-threatening response to infection, leading to widespread inflammation and organ failure.  
+140. Sepsis: Life-threatening response to infection, leading to widespread inflammation and organ failure.  
 141. Respiratory Failure: A condition where the lungs fail to provide enough oxygen or remove carbon dioxide, leading to severe health risks.  
 142. Pericardial Effusion Body Substance: Fluid buildup around the heart, which can compress the heart and impair its function.  
 143. Ileus: Temporary lack of movement in the intestines, causing blockage and abdominal pain.  
