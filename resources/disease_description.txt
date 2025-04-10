@@ -137,7 +137,7 @@
 137. Carcinoma Colon: Cancer of the colon or rectum, affecting bowel function and general health.  
 138. Anxiety State: A condition of excessive fear, worry, or nervousness, affecting daily life and well-being.  
 139. Cardiomyopathy: Disease of the heart muscle, leading to reduced pumping ability and heart failure.  
-140. Sepsis: Life-threatening response to infection, leading to widespread inflammation and organ failure.  
+140. Sepsis (Invertebrate): Life-threatening response to infection, leading to widespread inflammation and organ failure.  
 141. Respiratory Failure: A condition where the lungs fail to provide enough oxygen or remove carbon dioxide, leading to severe health risks.  
 142. Pericardial Effusion Body Substance: Fluid buildup around the heart, which can compress the heart and impair its function.  
 143. Ileus: Temporary lack of movement in the intestines, causing blockage and abdominal pain.  
@@ -146,7 +146,3 @@
 146. Diverticulosis: Presence of small pouches in the colon wall, which may lead to diverticulitis if inflamed.  
 147. Insufficiency Renal: Reduced kidney function, impairing waste removal and electrolyte balance.  
 148. Cirrhosis: Scarring of the liver caused by chronic damage, often due to alcohol or hepatitis.
-
-
-
- 
