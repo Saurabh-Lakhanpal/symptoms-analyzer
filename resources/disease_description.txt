@@ -1,148 +1,134 @@
-1. Acquired Immuno-deficiency Syndrome: A chronic, life-threatening condition caused by HIV, weakening the immune system.  
-2. Adenocarcinoma: Cancer originating in glandular tissues, often found in the lungs, colon, or breasts.  
-3. Adhesion: Scar tissue bands forming between organs or tissues, often after surgery or inflammation.  
-4. Chronic Alcoholic Intoxication: Long-term excessive alcohol use causing physical, mental, and organ damage.  
-5. Alzheimer's Disease: A progressive brain disorder leading to memory loss, confusion, and cognitive decline.  
-6. Anemia: A condition marked by a lack of healthy red blood cells, causing fatigue and weakness.  
-7. Sickle Cell Anemia: A genetic disorder where red blood cells are misshapen, leading to pain and potential organ damage.  
-8. Stenosis Aortic Valve: Narrowing of the aortic valve in the heart, restricting blood flow and causing chest pain or fatigue.  
-9. Aphasia: A communication disorder affecting the ability to speak, read, or write, often due to brain injury.  
-10. Arthritis: Inflammation of the joints, leading to pain, swelling, and stiffness.  
-11. Asthma: A chronic respiratory condition causing airway inflammation, shortness of breath, and wheezing.  
-12. Bacteremia: The presence of bacteria in the bloodstream, potentially leading to severe infections.  
-13. Benign Prostatic Hypertrophy: Non-cancerous prostate gland enlargement, causing urinary issues in men.  
-14. Bipolar Disorder: A mental health condition marked by extreme mood swings between mania and depression.  
-15. Malignant Neoplasm of Breast: A cancerous tumor originating in breast tissue, varying in growth and spread.  
-16. Spasm Bronchial: Sudden contraction of bronchial muscles, causing difficulty in breathing.  
-17. Bronchitis: Inflammation of the bronchial tubes, often causing cough, mucus production, and chest discomfort.  
-18. Malignant Neoplasms: General term for cancers characterized by uncontrolled cell growth and potential spread.  
-19. Candidiasis: Fungal infection caused by Candida, often affecting the mouth, throat, or genital area.  
-20. Oral Candidiasis: Fungal infection in the mouth or throat caused by Candida, leading to white patches and discomfort.
-21. Carcinoma: A type of cancer originating in epithelial cells, affecting organs like the skin, lungs, or colon.  
-22. Malignant Tumor of Colon: Cancerous growth in the colon, leading to changes in bowel habits and abdominal pain.  
-23. Cellulitis: Bacterial skin infection causing redness, swelling, and pain, often affecting the legs.  
-24. Transient Ischemic Attack: A brief episode of stroke-like symptoms due to reduced blood flow to the brain.  
-25. Cholecystitis: Inflammation of the gallbladder, often caused by gallstones, leading to pain and fever.  
-26. Cholelithiasis: The presence of gallstones in the gallbladder, which may cause pain, nausea, or inflammation.  
-27. Colitis: Inflammation of the colon, leading to diarrhea, abdominal pain, and discomfort.  
-28. Confusion: A state of being disoriented or unclear in thought, often caused by illness, injury, or medication.  
-29. Coronary Arteriosclerosis: Hardening and narrowing of coronary arteries due to plaque buildup, reducing blood flow to the heart.  
-30. Coronary Heart Disease: A condition caused by narrowed coronary arteries, leading to chest pain or heart attacks.  
-31. Decubitus Ulcer: Open sores caused by prolonged pressure on the skin, commonly known as bedsores.  
-32. Deglutition Disorder: Difficulty swallowing, often linked to neurological or structural issues in the throat.  
-33. Dehydration: A condition caused by insufficient fluid intake, leading to dizziness, fatigue, and dry skin.  
-34. Delirium: Sudden confusion or altered mental state, often caused by illness or medication.  
-35. Delusion: False beliefs strongly held despite evidence, often associated with mental health conditions.  
-36. Depression Mental: Persistent feelings of sadness or hopelessness, affecting daily life and mental well-being.  
-37. Depressive Disorder: A mood disorder characterized by prolonged periods of depression, impacting thoughts and behavior.  
-38. Diabetes: Chronic condition affecting the body's ability to regulate blood sugar levels.  
-39. Ketoacidosis Diabetic: A serious complication of diabetes, where high blood sugar leads to the production of acidic ketones.  
-40. Diverticulitis: Inflammation or infection of small pouches in the colon, causing abdominal pain and fever.  
-41. Paroxysmal Dyspnea: Sudden shortness of breath, often caused by heart failure or asthma.  
-42. Endocarditis: Infection of the inner lining of the heart, typically affecting the valves.  
-43. Epilepsy: Neurological disorder causing recurrent seizures due to abnormal brain activity.  
-44. Tonic-Clonic Epilepsy: A type of epilepsy with seizures involving muscle rigidity and jerking movements.  
-45. Exanthema: Skin rash commonly caused by viral infections, such as measles or chickenpox.  
-46. Gastritis: Inflammation of the stomach lining, causing nausea, pain, and discomfort.  
-47. Gastroenteritis: Intestinal infection causing diarrhea, nausea, and vomiting, often from contaminated food or water.  
-48. Gastroesophageal Reflux Disease: Condition where stomach acid frequently flows into the esophagus, causing heartburn.  
-49. Glaucoma: Eye disorder damaging the optic nerve, often linked to increased pressure in the eye.  
-50. Gout: A type of arthritis caused by excessive uric acid, leading to painful joint swelling.  
-51. Failure Heart: A condition where the heart cannot pump sufficient blood to meet the body’s needs.  
-52. Failure Heart Congestive: Chronic heart failure causing fluid buildup in the lungs and other parts of the body.  
-53. Hemiparesis: Weakness or partial paralysis on one side of the body, often caused by a stroke.  
-54. Hemorrhoids: Swollen veins in the lower rectum or anus, causing pain, itching, or bleeding.  
-55. Hepatitis: Inflammation of the liver, often caused by viral infections, toxins, or alcohol.  
-56. Hepatitis B: Viral infection affecting the liver, which can lead to chronic disease or liver cancer.  
-57. Hepatitis C: Liver infection caused by the Hepatitis C virus, leading to chronic inflammation and damage.  
-58. Primary Carcinoma of the Liver Cells: Liver cancer originating in hepatocytes, often linked to cirrhosis.  
-59. Hernia: Protrusion of an organ or tissue through a weak spot in surrounding muscle or fascia.  
-60. Hernia Hiatal: Condition where part of the stomach pushes through the diaphragm, often causing acid reflux.
-61. HIV: Human Immunodeficiency Virus, attacks the immune system and can lead to AIDS if untreated.  
-62. HIV Infections: Infections associated with HIV, often due to weakened immunity.  
-63. Hyperbilirubinemia: Elevated levels of bilirubin in the blood, leading to jaundice.  
-64. Hypercholesterolemia: High cholesterol levels in the blood, increasing the risk of heart disease.  
-65. Hyperglycemia: Elevated blood sugar levels, often associated with diabetes.  
-66. Hyperlipidemia: Excessive fats (lipids) in the blood, contributing to cardiovascular disease.  
-67. Hypertensive Disease: Chronic high blood pressure, increasing the risk of heart attack or stroke.  
-68. Hypertension Pulmonary: High blood pressure in the arteries of the lungs, causing breathlessness.  
-69. Hypoglycemia: Low blood sugar levels, leading to symptoms like dizziness and weakness.  
-70. Hypothyroidism: Underactive thyroid gland, leading to fatigue, weight gain, and cold sensitivity.  
-71. Incontinence: Loss of bladder or bowel control, often caused by aging or medical conditions.  
-72. Infection: Invasion of the body by pathogens, causing illness or disease.  
-73. Influenza: Contagious viral infection affecting the respiratory system, causing fever and fatigue.  
-74. Ischemia: Reduced blood flow to tissues, leading to oxygen deprivation and potential damage.  
-75. Kidney Disease: Chronic or acute dysfunction of the kidneys, impairing waste filtration.  
-76. Kidney Failure Acute: Sudden loss of kidney function, requiring immediate medical attention.  
-77. Chronic Kidney Failure: Long-term decline in kidney function, potentially leading to dialysis or transplant.  
-78. Fibroid Tumor: Noncancerous growths in the uterus, causing pain or heavy menstrual bleeding.  
-79. Chronic Obstructive Airway Disease: Progressive lung disease causing breathing difficulties.  
-80. Lymphatic Diseases: Disorders affecting the lymphatic system, impacting immunity and fluid balance.
-81. Lymphoma: Cancer of the lymphatic system, affecting immune cells and often causing swollen lymph nodes.  
-82. Manic Disorder: A mental condition marked by heightened energy, euphoria, and impulsive behavior.  
-83. Melanoma: Aggressive skin cancer developing in melanocytes, linked to sun exposure or genetic factors.  
-84. Mitral Valve Insufficiency: A heart valve disorder where blood leaks backward into the atrium.  
-85. Myocardial Infarction: Commonly known as a heart attack, caused by blocked blood flow to the heart muscle.  
-86. Neoplasm Metastasis: Spread of cancer cells from the primary tumor to other parts of the body.  
-87. Neoplasm: An abnormal growth of tissue, which may be benign or malignant.  
-88. Neutropenia: Low levels of neutrophils, a type of white blood cell, leading to increased infection risk.  
-89. Obesity: Excessive body fat accumulation, raising the risk of various health issues.  
-90. Obesity Morbid: Severe obesity associated with significant health risks and reduced life expectancy.  
-91. Degenerative Polyarthritis: Progressive joint disease causing pain, stiffness, and reduced mobility.  
-92. Osteomyelitis: Infection of the bone, often caused by bacteria or fungi, leading to pain and fever.  
-93. Osteoporosis: A condition where bones become weak and brittle, increasing fracture risk.  
-94. Pancreatitis: Inflammation of the pancreas, causing abdominal pain and digestive issues.  
-95. Pancytopenia: Reduction of red and white blood cells and platelets, often due to bone marrow disorders.  
-96. Parkinson Disease: A neurodegenerative disorder causing tremors, stiffness, and difficulty with movement.  
-97. Ulcer Peptic: Open sores in the stomach or duodenum lining, causing pain and discomfort.  
-98. Effusion Pericardial: Excess fluid around the heart, which can affect its function.  
-99. Personality Disorder: Long-term mental health conditions affecting emotions, behavior, and interpersonal relationships.  
-100. Pneumonia: Lung infection causing cough, fever, and difficulty breathing.
-101. Pneumonia Aspiration: Lung infection caused by inhaling food, liquid, or vomit, leading to inflammation.  
-102. Pneumocystis Carinii Pneumonia: A fungal infection of the lungs, commonly affecting immunocompromised individuals.  
-103. Pneumothorax: Collapsed lung due to air entering the space between the lung and chest wall.  
-104. Psychotic Disorder: Severe mental disorders causing delusions, hallucinations, or disorganized thinking.  
-105. Edema Pulmonary: Fluid buildup in the lungs, making breathing difficult and reducing oxygen levels.  
-106. Embolism Pulmonary: A blood clot blocking an artery in the lungs, causing chest pain and breathlessness.  
-107. Emphysema Pulmonary: A type of COPD causing damage to air sacs in the lungs, leading to breathing difficulty.  
-108. Pyelonephritis: Kidney infection typically caused by bacteria, leading to fever, pain, and nausea.  
-109. Failure Kidney: Inability of the kidneys to filter waste, often leading to toxin buildup in the body.  
-110. Schizophrenia: A mental disorder involving delusions, hallucinations, and impaired social functioning.  
-111. Septicemia: A severe bloodstream infection that can lead to widespread inflammation and organ failure.  
-112. Accident Cerebrovascular: Commonly known as a stroke, caused by interrupted blood flow to the brain.  
-113. Suicide Attempt: A deliberate act of self-harm with the intention to end one's life.  
-114. Tachycardia Sinus: Abnormally fast heart rate originating from the sinus node in the heart.  
-115. Thrombocytopaenia: Low platelet count, increasing the risk of bleeding and bruising.  
-116. Tricuspid Valve Insufficiency: A heart condition where the tricuspid valve allows backward blood flow.  
-117. Upper Respiratory Infection: Infection affecting the nose, throat, or airways, commonly known as a cold.  
-118. Infection Urinary Tract: Bacterial infection of the urinary system, causing pain and frequent urination.  
-119. Peripheral Vascular Disease: Circulatory disorder affecting blood flow to the limbs, causing pain and numbness.  
-120. Encephalopathy: Brain dysfunction caused by damage or disease, leading to confusion and altered mental state.
-121. Thrombus: A blood clot formed in a blood vessel, potentially blocking normal blood flow.  
-122. Deep Vein Thrombosis: A blood clot in a deep vein, usually in the leg, causing swelling and pain.  
-123. Migraine Disorders: Neurological condition causing severe headaches, nausea, and light sensitivity.  
-124. Affect Labile: Rapid and extreme changes in mood or emotions, often linked to mental health conditions.  
-125. Biliary Calculus: Gallstones formed in the gallbladder, leading to pain and digestive issues.  
-126. Malignant Neoplasm of Lung: Lung cancer characterized by uncontrolled growth of abnormal cells.  
-127. Systemic Infection: Infection affecting multiple organs or systems, often severe and life-threatening.  
-128. Malignant Neoplasm of Prostate: Prostate cancer, common in men, often detected early through screenings.  
-129. Dependence: A state of reliance on substances or behaviors, leading to physical or psychological effects.  
-130. Neuropathy: Nerve damage causing pain, weakness, or numbness, often linked to diabetes or injury.
-131. Tonic-Clonic Seizures: A type of seizure involving muscle rigidity followed by jerking movements, often linked to epilepsy.  
-132. Dementia: Cognitive decline affecting memory, reasoning, and behavior, often progressive and irreversible.  
-133. Overload Fluid: Excess fluid in the body, often due to heart, kidney, or liver issues, causing swelling and discomfort.  
-134. Carcinoma Prostate: Cancer of the prostate gland, commonly affecting older men.  
-135. Carcinoma Breast: Malignant tumor originating in breast tissue, often detected early through screenings.  
-136. Carcinoma of Lung: Lung cancer caused by abnormal cell growth, often linked to smoking or pollution.  
-137. Carcinoma Colon: Cancer of the colon or rectum, affecting bowel function and general health.  
-138. Anxiety State: A condition of excessive fear, worry, or nervousness, affecting daily life and well-being.  
-139. Cardiomyopathy: Disease of the heart muscle, leading to reduced pumping ability and heart failure.  
-140. Sepsis (Invertebrate): Life-threatening response to infection, leading to widespread inflammation and organ failure.  
-141. Respiratory Failure: A condition where the lungs fail to provide enough oxygen or remove carbon dioxide, leading to severe health risks.  
-142. Pericardial Effusion Body Substance: Fluid buildup around the heart, which can compress the heart and impair its function.  
-143. Ileus: Temporary lack of movement in the intestines, causing blockage and abdominal pain.  
-144. Primary Malignant Neoplasm: The original tumor site where cancer begins before spreading to other areas.  
-145. Paranoia: An irrational and persistent feeling of mistrust or belief that others intend harm.  
-146. Diverticulosis: Presence of small pouches in the colon wall, which may lead to diverticulitis if inflamed.  
-147. Insufficiency Renal: Reduced kidney function, impairing waste removal and electrolyte balance.  
-148. Cirrhosis: Scarring of the liver caused by chronic damage, often due to alcohol or hepatitis.
+1. hypertensive disease: Chronic high blood pressure increases risk of heart disease, stroke, and kidney damage.  
+2. diabetes: A metabolic disorder causing elevated blood sugar levels due to insulin issues.  
+3. depression mental: A condition marked by persistent sadness, low energy, and loss of interest.  
+4. coronary arteriosclerosis: Hardening of coronary arteries reduces blood flow to the heart.  
+5. pneumonia: A lung infection that causes cough, fever, and difficulty breathing.  
+6. failure heart congestive: The heart's reduced ability to pump blood effectively causes fluid buildup.  
+7. accidentcerebrovascular: A stroke occurs when blood flow to the brain is reduced or blocked.  
+8. asthma: A chronic respiratory condition causing airway inflammation and breathing difficulty.  
+9. myocardial infarction: A heart attack due to blocked blood flow to heart muscles.  
+10. hypercholesterolemia: Elevated blood cholesterol raises risk of heart disease.  
+11. infection: Invasion by harmful microorganisms causing illness or inflammation.  
+12. infection urinary tract: A bacterial infection of the urinary system causing discomfort.  
+13. anemia: A condition where low red blood cells reduce oxygen delivery to tissues.  
+14. chronic obstructive airway disease: A group of lung diseases causing airflow blockage and breathing issues.  
+15. dementia: A decline in memory, thinking, and daily functioning due to brain damage.  
+16. insufficiency renal: The kidneys fail to filter waste efficiently, leading to toxic buildup.  
+17. confusion: A state of disorientation affecting memory or focus.  
+18. degenerativepolyarthritis: A chronic joint condition causing pain and inflammation.  
+19. hypothyroidism: The thyroid produces insufficient hormones, slowing metabolism.  
+20. anxiety state: A mental health condition marked by excessive worry or fear.  
+21. malignant neoplasms: Cancerous tumors capable of invading tissues and spreading.  
+22. acquiredimmuno-deficiency syndrome: A chronic immune condition caused by HIV.  
+23. cellulitis: A bacterial skin infection causing redness, swelling, and pain.  
+24. gastroesophageal reflux disease: Acid reflux irritates the esophagus, causing discomfort.  
+25. septicemia: A severe infection spreading through the bloodstream.
+26. deep vein thrombosis: A condition where blood clots form in deep veins, often in the legs, causing pain and swelling.  
+27. dehydration: Excessive loss of body fluids leading to impaired physical functions.  
+28. neoplasm: An abnormal growth of tissue, which may be benign or malignant.  
+29. embolism pulmonary: A blockage in the lungs' arteries, often caused by blood clots.  
+30. epilepsy: A neurological disorder marked by recurrent seizures due to abnormal brain activity.  
+31. cardiomyopathy: Disease of the heart muscle, reducing its ability to pump blood effectively.  
+32. chronic kidney failure: Gradual loss of kidney function leading to the buildup of waste in the body.  
+33. carcinoma: A type of cancer originating in the skin or tissues lining internal organs.  
+34. hepatitis c: A liver infection caused by the hepatitis C virus, potentially leading to liver damage.  
+35. peripheral vascular disease: Poor circulation to the limbs caused by narrowed or blocked blood vessels.  
+36. psychotic disorder: A mental health condition causing distorted thinking, perceptions, and disconnection from reality.  
+37. hyperlipidemia: High levels of fats, like cholesterol, in the blood, increasing heart disease risks.  
+38. bipolar disorder: A mental illness causing extreme mood swings between manic highs and depressive lows.  
+39. obesity: Excessive body fat increasing risks of various health conditions.  
+40. ischemia: Reduced blood flow to tissues, causing oxygen deprivation and potential damage.  
+41. cirrhosis: Chronic liver disease characterized by scarring and impaired liver function.  
+42. exanthema: A widespread skin rash often caused by infections or allergic reactions.  
+43. benign prostatic hypertrophy: Non-cancerous enlargement of the prostate gland, often causing urinary issues.  
+44. kidney failure acute: Sudden loss of kidney function, leading to waste buildup and life-threatening complications.  
+45. mitral valve insufficiency: A condition where the mitral valve does not close properly, allowing blood to flow backward in the heart.  
+46. arthritis: Inflammation of joints causing pain, swelling, and stiffness.  
+47. bronchitis: Inflammation of the bronchial tubes, causing coughing and mucus production.  
+48. hemiparesis: Partial paralysis or weakness on one side of the body, often due to stroke.  
+49. osteoporosis: A condition that weakens bones, making them prone to fractures.  
+50. transient ischemic attack: A mini-stroke with temporary reduced blood flow to the brain.
+51. adenocarcinoma: A cancer that begins in glandular tissues, often affecting organs like lungs or colon.  
+52. paranoia: An irrational feeling of distrust or suspicion toward others.  
+53. pancreatitis: Inflammation of the pancreas causing severe abdominal pain and digestive problems.  
+54. incontinence: Loss of bladder or bowel control, leading to unintentional leakage.  
+55. paroxysmaldyspnea: Sudden episodes of difficulty breathing, often associated with heart or lung conditions.  
+56. hernia: When an internal organ pushes through a weak spot in the muscle or tissue wall.  
+57. malignant neoplasm of prostate: A cancerous growth in the prostate gland, potentially spreading to other areas.  
+58. edema pulmonary: Fluid buildup in the lungs, causing difficulty breathing and reduced oxygen exchange.  
+59. lymphatic diseases: Disorders affecting the lymphatic system, such as lymphedema or lymphoma.  
+60. stenosis aortic valve: Narrowing of the aortic valve, restricting blood flow from the heart.  
+61. malignant neoplasm of breast: Cancer originating in the breast tissue, often forming a tumor.  
+62. schizophrenia: A mental disorder causing delusions, hallucinations, and impaired thought processes.  
+63. diverticulitis: Inflammation or infection of small pouches in the digestive tract, causing pain.  
+64. overload fluid: Excess fluid in the body leading to swelling, weight gain, or breathing issues.  
+65. ulcer peptic: Open sores in the stomach lining or small intestine, causing pain and nausea.  
+66. osteomyelitis: Bone infection usually caused by bacteria, leading to swelling and pain.  
+67. gastritis: Inflammation of the stomach lining, often causing nausea and abdominal discomfort.  
+68. bacteremia: Presence of bacteria in the bloodstream, potentially causing severe infections.  
+69. failure kidney: Loss of kidney function leading to toxic waste buildup in the blood.  
+70. sickle cell anemia: A genetic blood disorder causing abnormally shaped red blood cells, leading to pain and fatigue.  
+71. failure heart: Inability of the heart to pump blood effectively, causing fatigue and fluid buildup.  
+72. upper respiratory infection: Infection affecting the nose, throat, or sinuses, causing congestion or cough.  
+73. hepatitis: Inflammation of the liver, often caused by viral infection or alcohol abuse.  
+74. hypertension pulmonary: High blood pressure in the arteries of the lungs, causing strain on the heart.  
+75. deglutition disorder: Difficulty swallowing due to nerve or muscle problems.
+76. gout: A type of arthritis caused by uric acid buildup, leading to joint pain and swelling.  
+77. thrombocytopaenia: A condition with abnormally low platelet levels, causing bleeding and bruising.  
+78. hypoglycemia: Low blood sugar levels causing shakiness, confusion, or fainting.  
+79. pneumonia aspiration: Lung infection caused by inhalation of food, liquid, or other material.  
+80. colitis: Inflammation of the colon causing abdominal pain, diarrhea, or bleeding.  
+81. diverticulosis: Formation of small pouches in the colon, which may lead to diverticulitis.  
+82. suicide attempt: A deliberate act of self-harm with the intention of ending one's life.  
+83. pneumocystiscariniipneumonia: A severe lung infection often affecting people with weakened immune systems.  
+84. hepatitis b: A liver infection caused by the hepatitis B virus, potentially leading to liver damage.  
+85. parkinson disease: A progressive neurological disorder affecting movement and causing tremors.  
+86. lymphoma: A type of cancer affecting the lymphatic system, including lymph nodes and spleen.  
+87. hyperglycemia: High blood sugar levels that may cause dehydration, fatigue, or complications.  
+88. encephalopathy: Brain dysfunction caused by infections, toxins, or other conditions.  
+89. tricuspid valve insufficiency: A condition where the tricuspid valve in the heart doesn’t close properly, allowing blood leakage.  
+90. alzheimer's disease: A progressive brain disorder causing memory loss, confusion, and cognitive decline.  
+91. candidiasis: A fungal infection often affecting the mouth, skin, or genitals.  
+92. neuropathy: Damage to peripheral nerves causing weakness, numbness, or pain.  
+93. kidney disease: A chronic condition affecting kidney function and waste filtration.  
+94. fibroid tumor: Non-cancerous growths in the uterus, often causing pain or bleeding.  
+95. glaucoma: Eye condition causing optic nerve damage and potential vision loss.  
+96. neoplasm metastasis: Spread of abnormal tissue growth (cancer) from its original site to other parts of the body.  
+97. malignant tumor of colon: A cancerous growth in the colon, often leading to abdominal discomfort or blood in stool.  
+98. ketoacidosis diabetic: A serious complication of diabetes caused by high blood sugar and ketone buildup.  
+99. tonic-clonic epilepsy: A seizure disorder with phases of muscle stiffness followed by jerking movements.  
+100. respiratory failure: Condition where the lungs fail to provide enough oxygen or remove carbon dioxide.
+101. melanoma: A type of skin cancer that develops in pigment-producing cells, often triggered by sun exposure.  
+102. gastroenteritis: Inflammation of the stomach and intestines causing diarrhea, vomiting, and abdominal pain.  
+103. malignant neoplasm of lung: A cancerous growth in the lungs, often linked to smoking or pollution.  
+104. manic disorder: A mental health condition with periods of elevated mood, energy, and unusual behavior.  
+105. personality disorder: Long-term mental health conditions affecting behavior, mood, and relationships.  
+106. primary carcinoma of the liver cells: A cancer originating in the liver cells, often linked to hepatitis or cirrhosis.  
+107. emphysema pulmonary: A lung condition causing difficulty breathing due to damaged alveoli.  
+108. hemorrhoids: Swollen veins in the rectum or anus causing pain, itching, or bleeding.  
+109. spasm bronchial: Sudden tightening of airway muscles, leading to difficulty breathing.  
+110. aphasia: A condition impairing the ability to speak, write, or understand language, often due to brain injury.  
+111. obesity morbid: Extreme obesity severely affecting health, mobility, and quality of life.  
+112. pyelonephritis: A bacterial infection of the kidneys causing fever, back pain, and frequent urination.  
+113. endocarditis: Inflammation of the heart's inner lining, usually caused by infection.  
+114. effusion pericardial: Fluid buildup around the heart, restricting its function and causing chest pain.  
+115. chronic alcoholic intoxication: Prolonged excessive alcohol consumption causing physical and mental health problems.  
+116. pneumothorax: A collapsed lung due to air leaking into the space between the lung and chest wall.  
+117. delirium: Sudden confusion or altered awareness often caused by illness, medications, or substance use.  
+118. neutropenia: An abnormally low level of neutrophils, increasing susceptibility to infections.  
+119. hyperbilirubinemia: Excess bilirubin in the blood causing yellowing of the skin and eyes (jaundice).  
+120. influenza: A contagious respiratory illness caused by influenza viruses, leading to fever, aches, and fatigue.  
+121. dependence: A condition where the body or mind requires a substance to function, often leading to withdrawal symptoms.  
+122. thrombus: A blood clot that can block circulation, potentially causing complications like strokes.  
+123. cholecystitis: Inflammation of the gallbladder, often due to gallstones, causing pain and fever.  
+124. herniahiatal: A condition where part of the stomach pushes up into the chest through the diaphragm.  
+125. migraine disorders: A neurological condition causing severe headaches, often with nausea and light sensitivity.
+126. pancytopenia: A condition with reduced levels of all blood cells, often caused by bone marrow disorders.  
+127. cholelithiasis: Formation of gallstones, causing pain and digestive issues.  
+128. tachycardia sinus: Increased heart rate originating from the heart’s natural pacemaker.  
+129. ileus: Disruption of the normal movement of the intestines, causing blockage.  
+130. adhesion: Scar tissue that forms between organs or tissues, sometimes leading to complications.  
+131. delusion: A fixed false belief, often associated with mental health disorders.  
+132. affect labile: Rapid and intense emotional changes, commonly seen in certain mental health conditions.  
+133. decubitus ulcer: Pressure sores or bedsores caused by prolonged pressure on the skin, often in immobile patients.
+
