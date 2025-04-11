@@ -43,19 +43,19 @@ function populateRelatedSymptoms(matches) {
 
     // Populate first set of related symptoms
     if (matches[0]) {
-        const list1 = matches[0].Sname.map(createCheckbox).join(' '); 
+        const list1 = matches[0].s_name.map(createCheckbox).join(' '); 
         relatedSymptoms1.innerHTML += `<br>${list1}`;
     }
 
     // Populate second set of related symptoms
     if (matches[1]) {
-        const list2 = matches[1].Sname.map(createCheckbox).join(' '); 
+        const list2 = matches[1].s_name.map(createCheckbox).join(' '); 
         relatedSymptoms2.innerHTML += `<br>${list2}`;
     }
 
     // Populate third set of related symptoms
     if (matches[2]) {
-        const list3 = matches[2].Sname.map(createCheckbox).join(' '); 
+        const list3 = matches[2].s_name.map(createCheckbox).join(' '); 
         relatedSymptoms3.innerHTML += `<br>${list3}`;
     }
 

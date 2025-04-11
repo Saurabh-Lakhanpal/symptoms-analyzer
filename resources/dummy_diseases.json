@@ -2,88 +2,88 @@
 {
     "diseases": [
       {
-        "diseaseID": "C0020676",
-        "Dname": "Hypothyroidism",
+        "disease_id": "C0020676",
+        "d_name": "Hypothyroidism",
         "description": "A condition in which the thyroid gland doesn't produce enough thyroid hormones, leading to fatigue, weight gain, and sluggish metabolism."
       },
       {
-        "diseaseID": "C0020538",
-        "Dname": "Hypertensive Disease",
+        "disease_id": "C0020538",
+        "d_name": "Hypertensive Disease",
         "description": "A condition characterized by persistently high blood pressure, which can lead to complications such as heart disease and stroke."
       },
       {
-        "diseaseID": "C0011847",
-        "Dname": "Diabetes",
+        "disease_id": "C0011847",
+        "d_name": "Diabetes",
         "description": "A metabolic disorder resulting in high blood sugar levels due to inadequate insulin production or utilization."
       },
       {
-        "diseaseID": "C0011570",
-        "Dname": "Depression",
+        "disease_id": "C0011570",
+        "d_name": "Depression",
         "description": "A mental health disorder characterized by persistent feelings of sadness, loss of interest, and emotional distress."
       },
       {
-        "diseaseID": "C0010054",
-        "Dname": "Coronary Arteriosclerosis",
+        "disease_id": "C0010054",
+        "d_name": "Coronary Arteriosclerosis",
         "description": "A condition where the arteries supplying blood to the heart become hardened and narrowed due to plaque buildup."
       },
       {
-        "diseaseID": "C0032285",
-        "Dname": "Pneumonia",
+        "disease_id": "C0032285",
+        "d_name": "Pneumonia",
         "description": "An infection that inflames the air sacs in the lungs, causing symptoms like fever, cough, and difficulty breathing."
       },
       {
-        "diseaseID": "C0018802",
-        "Dname": "Congestive Heart Failure",
+        "disease_id": "C0018802",
+        "d_name": "Congestive Heart Failure",
         "description": "A condition where the heart is unable to pump blood efficiently, leading to fluid buildup in the lungs and extremities."
       },
       {
-        "diseaseID": "C0038454",
-        "Dname": "Cerebrovascular Accident (Stroke)",
+        "disease_id": "C0038454",
+        "d_name": "Cerebrovascular Accident (Stroke)",
         "description": "A medical emergency caused by reduced or blocked blood flow to the brain, resulting in possible paralysis or speech impairment."
       },
       {
-        "diseaseID": "C0004096",
-        "Dname": "Asthma",
+        "disease_id": "C0004096",
+        "d_name": "Asthma",
         "description": "A chronic respiratory condition characterized by airway inflammation, causing wheezing, coughing, and difficulty breathing."
       },
       {
-        "diseaseID": "C0027051",
-        "Dname": "Myocardial Infarction (Heart Attack)",
+        "disease_id": "C0027051",
+        "d_name": "Myocardial Infarction (Heart Attack)",
         "description": "A condition caused by blockage of blood flow to the heart muscle, leading to chest pain and possible cardiac arrest."
       },
       {
-        "diseaseID": "C0020443",
-        "Dname": "Hypercholesterolemia",
+        "disease_id": "C0020443",
+        "d_name": "Hypercholesterolemia",
         "description": "A condition characterized by elevated cholesterol levels, increasing the risk of cardiovascular diseases."
       },
       {
-        "diseaseID": "C0021311",
-        "Dname": "Infection",
+        "disease_id": "C0021311",
+        "d_name": "Infection",
         "description": "A condition caused by the invasion of harmful microorganisms, leading to symptoms like fever, inflammation, and weakness."
       },
       {
-        "diseaseID": "C0042029",
-        "Dname": "Urinary Tract Infection",
+        "disease_id": "C0042029",
+        "d_name": "Urinary Tract Infection",
         "description": "An infection affecting the urinary system, causing symptoms such as pain during urination and frequent urination."
       },
       {
-        "diseaseID": "C0002871",
-        "Dname": "Anemia",
+        "disease_id": "C0002871",
+        "d_name": "Anemia",
         "description": "A condition in which there is a deficiency of red blood cells or hemoglobin, leading to fatigue and weakness."
       },
       {
-        "diseaseID": "C0024117",
-        "Dname": "Chronic Obstructive Pulmonary Disease (COPD)",
+        "disease_id": "C0024117",
+        "d_name": "Chronic Obstructive Pulmonary Disease (COPD)",
         "description": "A chronic lung condition characterized by obstructed airflow, leading to breathing difficulties."
       },
       {
-        "diseaseID": "C0497327",
-        "Dname": "Dementia",
+        "disease_id": "C0497327",
+        "d_name": "Dementia",
         "description": "A decline in cognitive function affecting memory, reasoning, and communication."
       },
       {
-        "diseaseID": "C1565489",
-        "Dname": "Renal Insufficiency",
+        "disease_id": "C1565489",
+        "d_name": "Renal Insufficiency",
         "description": "A condition where the kidneys fail to adequately filter waste from the blood, leading to fluid and electrolyte imbalances."
       }
     ]

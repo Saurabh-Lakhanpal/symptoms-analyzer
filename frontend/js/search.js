@@ -13,7 +13,7 @@ async function fetchSymptoms(searchTerm) {
         }
         const data = await response.json();
         return data.symptoms.filter(symptom =>
-            symptom.Sname.toLowerCase().includes(searchTerm.toLowerCase())
+            symptom.s_name.toLowerCase().includes(searchTerm.toLowerCase())
         );
     } catch (error) {
         console.error("Error fetching symptoms:", error);
@@ -45,9 +45,9 @@ function showSuggestions(suggestions) {
     // Populate suggestions with checkboxes
     suggestionBox.innerHTML = suggestions.map(suggestion => `
         <div class="suggestion-item">
-            <input type="checkbox" id="${suggestion.symptomID}" class="symptom-checkbox" 
-                   data-symptom="${suggestion.Sname}" ${selectedSymptoms.includes(suggestion.Sname) ? 'checked' : ''}>
-            <label for="${suggestion.symptomID}">${suggestion.Sname}</label>
+            <input type="checkbox" id="${suggestion.symptom_id}" class="symptom-checkbox" 
+                   data-symptom="${suggestion.s_name}" ${selectedSymptoms.includes(suggestion.s_name) ? 'checked' : ''}>
+            <label for="${suggestion.symptom_id}">${suggestion.s_name}</label>
         </div>
     `).join('');
 
