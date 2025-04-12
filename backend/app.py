@@ -1,84 +1,140 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from sqlalchemy import create_engine, Table, MetaData
+from sqlalchemy.orm import Session
+from collections import OrderedDict
+
+# PostgreSQL Database Setup
+db_params = {
+    'dbname': 'disease_symptom_db',
+    'user': 'postgres',
+    'password': 'postgres',
+    'host': 'localhost',
+    'port': '5432'
+}
+connection_string = f"postgresql://{db_params['user']}:{db_params['password']}@{db_params['host']}:{db_params['port']}/{db_params['dbname']}"
+engine = create_engine(connection_string)
+metadata = MetaData()
+metadata.reflect(bind=engine)  # Automatically load table metadata
+
+# Map the tables
+Symptoms = Table('symptoms_tb', metadata, autoload_with=engine)
+Diseases = Table('diseases_tb', metadata, autoload_with=engine)
+DiseaseSymptom = Table('disease_symptom_tb', metadata, autoload_with=engine)
 
 # Flask Setup
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for all routes
 
-# Sample symptoms data
-symptoms_data = {
-    "symptoms": [
-        {"symptom_id": "C0008031", "s_name": "Pain Chest"},
-        {"symptom_id": "C0392680", "s_name": "Shortness of Breath"},
-        {"symptom_id": "C0012833", "s_name": "Dizziness"},
-        {"symptom_id": "C0004093", "s_name": "Asthenia"},
-        {"symptom_id": "C0085639", "s_name": "Fall"},
-        {"symptom_id": "C0039070", "s_name": "Syncope"},
-        {"symptom_id": "C0042571", "s_name": "Vertigo"},
-        {"symptom_id": "C0038990", "s_name": "Sweating Increased"},
-        {"symptom_id": "C0030252", "s_name": "Palpitation"},
-        {"symptom_id": "C0027497", "s_name": "Nausea"},
-        {"symptom_id": "C0002962", "s_name": "Angina Pectoris"},
-        {"symptom_id": "C0438716", "s_name": "Pressure Chest"},
-        {"symptom_id": "C0032617", "s_name": "Polyuria"},
-        {"symptom_id": "C0085602", "s_name": "Polydypsia"},
-        {"symptom_id": "C0085619", "s_name": "Orthopnea"},
-        {"symptom_id": "C0034642", "s_name": "Rale"},
-        {"symptom_id": "C0241526", "s_name": "Unresponsiveness"},
-        {"symptom_id": "C0856054", "s_name": "Mental Status Changes"},
-        {"symptom_id": "C0042963", "s_name": "Vomiting"},
-        {"symptom_id": "C0553668", "s_name": "Labored Breathing"},
-        {"symptom_id": "C0424000", "s_name": "Feeling Suicidal"},
-        {"symptom_id": "C0438696", "s_name": "Suicidal"},
-        {"symptom_id": "C0233762", "s_name": "Hallucinations Auditory"},
-        {"symptom_id": "C0150041", "s_name": "Feeling Hopeless"},
-        {"symptom_id": "C0424109", "s_name": "Weepiness"},
-        {"symptom_id": "C0917801", "s_name": "Sleeplessness"},
-        {"symptom_id": "C0424230", "s_name": "Motor Retardation"},
-        {"symptom_id": "C0022107", "s_name": "Irritable Mood"},
-        {"symptom_id": "C0312422", "s_name": "Blackout"}
-    ]
-}
+# Error Handlers
+@app.errorhandler(400)
+def bad_request_error(error):
+    return jsonify({"error": "Bad Request", "message": str(error)}), 400
 
-# Sample matches data
-matches_data = {
-    "matches": [
-        {
-            "d_name": "Hypertensive Disease",
-            "s_name": ["Pain Chest", "Shortness of Breath", "Dizziness", "Asthenia", "Fall", "Syncope", "Vertigo", "Sweating Increased", "Palpitation", "Nausea", "Angina Pectoris", "Pressure Chest"],
-            "frequency": 3363
-        },
-        {
-            "d_name": "Diabetes",
-            "s_name": ["Polyuria", "Polydypsia", "Shortness of Breath", "Pain Chest", "Asthenia", "Nausea", "Orthopnea", "Rale", "Sweating Increased", "Unresponsiveness", "Mental Status Changes", "Vertigo", "Vomiting", "Labored Breathing"],
-            "frequency": 1421
-        },
-        {
-            "d_name": "Depression",
-            "s_name": ["Feeling Suicidal", "Suicidal", "Hallucinations Auditory", "Feeling Hopeless", "Weepiness", "Sleeplessness", "Motor Retardation", "Irritable Mood", "Blackout"],
-            "frequency": 1337
-        }
-    ]
-}
+@app.errorhandler(404)
+def not_found_error(error):
+    return jsonify({"error": "Not Found", "message": str(error)}), 404
 
-# Route to serve the symptoms data
+@app.errorhandler(500)
+def internal_server_error(error):
+    return jsonify({"error": "Internal Server Error", "message": str(error)}), 500
+
+# Route: Get all symptoms
 @app.route('/api.01/symptoms', methods=['GET'])
 def get_symptoms():
-    return jsonify(symptoms_data)
+    session = Session(engine)
+    try:
+        # Query all symptoms
+        results = session.query(Symptoms).all()
 
-# Route to serve matches based on selected symptoms
+        if not results:
+            return jsonify({"error": "No symptoms found"}), 404
+
+        # Format the response
+        symptoms = [
+            {"symptom_id": symptom.symptom_id, "s_name": symptom.s_name}
+            for symptom in results
+        ]
+    except Exception as e:
+        return jsonify({"error": "Database Error", "message": str(e)}), 500
+    finally:
+        session.close()
+
+    return jsonify({"symptoms": symptoms}), 200
+
+# Route: Get all diseases
+@app.route('/api.01/diseases', methods=['GET'])
+def get_diseases():
+    session = Session(engine)
+    try:
+        # Query all diseases
+        results = session.query(Diseases).all()
+
+        if not results:
+            return jsonify({"error": "No diseases found"}), 404
+
+        # Format the response
+        diseases = [
+            {"disease_id": disease.disease_id, "d_name": disease.d_name, "description": disease.description}
+            for disease in results
+        ]
+    except Exception as e:
+        return jsonify({"error": "Database Error", "message": str(e)}), 500
+    finally:
+        session.close()
+
+    return jsonify({"diseases": diseases}), 200
+
+# Route: Get matches based on selected symptoms
 @app.route('/api.01/matches', methods=['GET'])
 def get_matches():
-    # Capture selected symptoms from the query parameter
-    selected_symptoms = request.args.get('symptoms', "").split(',')
+    session = Session(engine)
+    try:
+        # Capture selected symptoms from query parameters
+        selected_symptoms = request.args.get('symptoms', "").split(',')
+        
+        if not selected_symptoms or selected_symptoms == ['']:
+            return jsonify({"error": "No symptoms provided"}), 400
 
-    # Filter matches based on selected symptoms (basic example)
-    filtered_matches = [
-        match for match in matches_data["matches"]
-        if any(symptom in selected_symptoms for symptom in match["s_name"])
-    ]
+        # Join tables to fetch matches for selected symptoms
+        matches_query = session.query(DiseaseSymptom, Diseases).join(
+            Diseases,
+            DiseaseSymptom.c.disease_id == Diseases.c.disease_id
+        ).filter(DiseaseSymptom.c.s_name.in_(selected_symptoms)).all()
 
-    return jsonify({"matches": filtered_matches})
+        if not matches_query:
+            return jsonify({"error": "No matches found"}), 404
+
+        # Aggregate matches
+        matches = {}
+        for row in matches_query:
+            disease = row[1]
+            symptom = row[0]
+            if disease.d_name not in matches:
+                matches[disease.d_name] = {
+                    "d_name": disease.d_name,
+                    "s_name": [],
+                    "frequency": 0
+                }
+            matches[disease.d_name]["s_name"].append(symptom.s_name)
+            matches[disease.d_name]["frequency"] += 1
+
+        # Calculate probabilities
+        total_frequency = sum(match["frequency"] for match in matches.values())
+        matches_json = [
+            {
+                "d_name": match["d_name"],
+                "s_name": match["s_name"],
+                "probability": f"{(match['frequency'] / total_frequency) * 100:.2f}%"
+            }
+            for match in matches.values()
+        ]
+    except Exception as e:
+        return jsonify({"error": "Database Error", "message": str(e)}), 500
+    finally:
+        session.close()
+
+    return jsonify({"matches": matches_json}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)

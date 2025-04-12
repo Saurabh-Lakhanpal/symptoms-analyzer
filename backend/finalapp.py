@@ -7,7 +7,7 @@ import json
 
 # Database Setup
 db_params = {
-    'dbname': 'project4_db',
+    'dbname': 'disease_symptom_db',
     'user': 'postgres',
     'password': 'postgres',
     'host': 'localhost',
@@ -45,12 +45,12 @@ def welcome():
     return (
         f"<h2>Available Routes:</h2>"
         f"<ul>"
-        f"<li><a href='/api/v1.0/symptoms'>/api/v1.0/symptoms</a> - Get all symptoms</li>"
-        f"<li><a href='/api/v1.0/diseases'>/api/v1.0/diseases</a> - Get all diseases</li>"
+        f"<li><a href='/api.01/symptoms'>/api.01/symptoms</a> - Get all symptoms</li>"
+        f"<li><a href='/api.01/diseases'>/api.01/diseases</a> - Get all diseases</li>"
         f"</ul>"
     )
 
-@app.route("/api/v1.0/symptoms")
+@app.route("/api.01/symptoms")
 def get_symptoms():
     session = Session(engine)
     try:
@@ -63,8 +63,8 @@ def get_symptoms():
     symptoms_list = []
     for s in results:
         s_dict = OrderedDict({
-            "symptomID": s.symptomID,
-            "Sname": s.Sname
+            "symptom_id": s.symptom_id,
+            "s_name": s.s_name
         })
         symptoms_list.append(s_dict)
 
@@ -73,7 +73,7 @@ def get_symptoms():
         mimetype='application/json'
     )
 
-@app.route("/api/v1.0/diseases")
+@app.route("/api.01/diseases")
 def get_diseases():
     session = Session(engine)
     try:
@@ -86,9 +86,9 @@ def get_diseases():
     diseases_list = []
     for d in results:
         d_dict = OrderedDict({
-            "diseaseID": d.diseaseID,
-            "Dname": d.Dname,
-            "Description": d.Description
+            "disease_id": d.disease_id,
+            "d_name": d.d_name,
+            "description": d.description
         })
         diseases_list.append(d_dict)
 
