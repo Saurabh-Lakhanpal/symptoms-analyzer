@@ -13,6 +13,11 @@ html, body {
     background-size: cover;
 }
 
+.logo {
+    max-height: 90px !important;
+    width: auto;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -21,6 +26,13 @@ html, body {
     align-items: center;
 }
 
+/* .title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
 .title {
     position: absolute;
     top: 20px;
@@ -28,12 +40,13 @@ html, body {
     transform: translateX(-50%);
     font-size: 3em;
     font-weight: bold;
-    color: #27CCCC;
-    text-shadow: 3px 3px 5px #032580;
+    color: #E9E6D7;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .search-section {
     margin-top: 30px;
+    color: #0B2B62;
 }
 
 .search-section input {
@@ -42,18 +55,20 @@ html, body {
     font-size: 1em;
     border-radius: 5px;
     text-align: center;
-    border: 2px solid #06146B;
+    border: 4px solid #3B5A6D;
+    color: #0B2B62;
 }
 
 .cta {
     width: 250px;
     padding: 12px;
     font-size: 1.2em;
-    background-color: #06146B;
+    background-color: #E94041;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
-    color: white;
+    color: #E9E6D7;
     border: none;
     border-radius: 5px;
+    border: 4px solid #3B5A6D;
     cursor: pointer;
     margin-bottom: 60px;
 }
@@ -64,9 +79,10 @@ html, body {
     bottom: 60px;
     width: 300px;
     height: 80vh;
-    background-color: #27CCCC;
+    background-color: #E9E6D7;
     opacity: 0.9;
     border-radius: 10px;
+    border: 5px solid #3B5A6D;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,12 +94,12 @@ html, body {
     width: 250px;
     padding: 12px;
     font-size: 1.2em;
-    background-color: white;
-    color: #032580;
+    background-color: #E9E6D7;
+    color: #0B2B62;
     border: none;
     border-radius: 5px;
     margin-bottom: 60px;
-    margin-top: 60px;
+    margin-top: 30px;
     text-align: left;
 }
 
@@ -131,7 +147,7 @@ html, body {
 .related-symptoms {
     font-size: 1.2em;
     width: 70%;
-    background-color: #27CCCC;
+    background-color: #E9E6D7;
     opacity: 0.9;
     display: flex;
     flex-direction: column;
@@ -140,10 +156,13 @@ html, body {
     padding: 20px;
     height: 90%;
     border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;   
+    border-bottom-left-radius: 10px;
+    border: 5px solid #3B5A6D;
+    border-right: none;   
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
-    text-decoration-color: #06146B;
+    color: #0B2B62;
     display: inline;
+    color: #0B2B62;
 }
 
 .matches {
@@ -154,22 +173,22 @@ html, body {
     justify-content: space-between;
     height: 100%;
     box-shadow: 10 10 10px black (255, 255, 255, 0.9);
-    border: 2px solid #27CCCC;
+    border: 5px solid #3B5A6D;
     border-radius: 10px;
-    background-color: #27CCCC;
+    background-color: #E9E6D7;
 
 }
 
 .disease-description {
     width: 100%;
     height: 20%;
-    background-color: #06146B;
+    background-color: #3B5A6D;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
-    color: white;
+    color: #E9E6D7;
     text-align: center;
     font-size: 1.2em;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,9 +197,9 @@ html, body {
 .symptoms-box {
     width: 100%;
     height: 80%;
-    background-color: #27CCCC;
+    background-color: #E9E6D7;
     opacity: 0.9;
-    text-decoration-color: #06146B;
+    color: #0B2B62;
     text-align: center;
     font-size: 1.2em;
     display: flex;
@@ -198,6 +217,7 @@ html, body {
     gap: 20px; 
     padding: 5px; 
     cursor: pointer; 
+    color: #0B2B62;
 }
 
 #suggestions .symptom-checkbox {
@@ -207,8 +227,8 @@ html, body {
 
 /* Style for the remove-symptom (X button) */
 .remove-symptom {
-    background-color: #06146B;
-    color: white; 
+    background-color: #3B5A6D;
+    color: #E9E6D7; 
     border: none; 
     border-radius: 50%; 
     width: 20px; 
@@ -219,12 +239,13 @@ html, body {
     font-size: 12px; 
     cursor: pointer; 
     transition: all 0.3s ease; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 /* Hover effect for the "X" button */
 .remove-symptom:hover {
-    background-color: #27CCCC;
+    background-color: #E9E6D7;
+    color: #E94041; 
     transform: scale(1.2); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }

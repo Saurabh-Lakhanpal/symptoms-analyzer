@@ -24,7 +24,7 @@ DiseaseSymptom = Table('disease_symptom_tb', metadata, autoload_with=engine)
 
 # Flask Setup
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "*"}})  
 
 # Error Handlers
 @app.errorhandler(400)
@@ -39,6 +39,18 @@ def not_found_error(error):
 def internal_server_error(error):
     return jsonify({"error": "Internal Server Error", "message": str(error)}), 500
 
+#=============== API PAGE =========================================================
+@app.route("/")
+def welcome():
+    return (
+        f"<h2>Available Routes:</h2>"
+        f"<ul>"
+        f"<li><a href='/api.01/symptoms'>/api.01/symptoms</a> - Get all symptoms</li>"
+        f"<li><a href='/api.01/diseases'>/api.01/diseases</a> - Get all diseases</li>"
+        f"</ul>"
+    )
+
+#=============== GET ALL SYMPTOMS =================================================
 # Route: Get all symptoms
 @app.route('/api.01/symptoms', methods=['GET'])
 def get_symptoms():
@@ -62,6 +74,7 @@ def get_symptoms():
 
     return jsonify({"symptoms": symptoms}), 200
 
+#=============== GET ALL DISEASES =================================================
 # Route: Get all diseases
 @app.route('/api.01/diseases', methods=['GET'])
 def get_diseases():
@@ -85,6 +98,8 @@ def get_diseases():
 
     return jsonify({"diseases": diseases}), 200
 
+
+#=============== GET ALL MATCHES =================================================
 # Route: Get matches based on selected symptoms
 @app.route('/api.01/matches', methods=['GET'])
 def get_matches():
