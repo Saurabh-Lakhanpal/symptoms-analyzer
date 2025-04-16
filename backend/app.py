@@ -2,7 +2,10 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from sqlalchemy import create_engine, Table, MetaData
 from sqlalchemy.orm import Session
-from collections import OrderedDict
+import pandas as pd
+import numpy as np
+import pickle
+from tensorflow.keras.models import load_model  # Import for loading the model
 
 # PostgreSQL Database Setup
 db_params = {
@@ -24,7 +27,39 @@ DiseaseSymptom = Table('disease_symptom_tb', metadata, autoload_with=engine)
 
 # Flask Setup
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  
+CORS(app, resources={r"/*": {"origins": "*"}})
+
+# Load scaler globally
+with open(r'C:\Users\Saurabh Lakhanpal\OneDrive\DA-UofT\UofTSubmissions\Module-23-24-Challenge-Project 4\symptoms-analyzer\backend\models\scaler.pkl', 'rb') as f:
+    scaler = pickle.load(f)
+
+# Load binary_features globally
+with open(r'C:\Users\Saurabh Lakhanpal\OneDrive\DA-UofT\UofTSubmissions\Module-23-24-Challenge-Project 4\symptoms-analyzer\backend\models\binary_features.pkl', 'rb') as f:
+    binary_features = pickle.load(f)
+
+# Load the trained model globally
+model = load_model(r'C:\Users\Saurabh Lakhanpal\OneDrive\DA-UofT\UofTSubmissions\Module-23-24-Challenge-Project 4\symptoms-analyzer\backend\models\disease_prediction_model.h5')
+
+# Dynamically recreate disease_symptom_hotcoded
+session = Session(engine)
+try:
+    # Query symptom_disease_tb for disease-symptom mapping
+    symptom_disease_data = session.query(DiseaseSymptom).all()
+
+    # Convert to DataFrame
+    symptom_disease_df = pd.DataFrame([
+        {"disease_id": item.disease_id, "symptom_id": item.symptom_id}
+        for item in symptom_disease_data
+    ])
+
+    # One-hot encode symptoms and group by disease_id
+    binary_features = pd.get_dummies(symptom_disease_df['symptom_id'])
+    disease_symptom_hotcoded = pd.concat(
+        [symptom_disease_df['disease_id'], binary_features],
+        axis=1
+    ).groupby('disease_id').sum().reset_index()
+finally:
+    session.close()
 
 # Error Handlers
 @app.errorhandler(400)
@@ -47,11 +82,12 @@ def welcome():
         f"<ul>"
         f"<li><a href='/api.01/symptoms'>/api.01/symptoms</a> - Get all symptoms</li>"
         f"<li><a href='/api.01/diseases'>/api.01/diseases</a> - Get all diseases</li>"
+        f"<li><a href='/api.01/matches?symptom_ids=C0085593,C0746619,C0030193,C0004093,C0004604'>"
+        f"/api.01/matches</a> - Get matching diseases based on selected symptoms (example query included)</li>"
         f"</ul>"
     )
 
 #=============== GET ALL SYMPTOMS =================================================
-# Route: Get all symptoms
 @app.route('/api.01/symptoms', methods=['GET'])
 def get_symptoms():
     session = Session(engine)
@@ -75,7 +111,6 @@ def get_symptoms():
     return jsonify({"symptoms": symptoms}), 200
 
 #=============== GET ALL DISEASES =================================================
-# Route: Get all diseases
 @app.route('/api.01/diseases', methods=['GET'])
 def get_diseases():
     session = Session(engine)
@@ -98,58 +133,62 @@ def get_diseases():
 
     return jsonify({"diseases": diseases}), 200
 
-
 #=============== GET ALL MATCHES =================================================
-# Route: Get matches based on selected symptoms
 @app.route('/api.01/matches', methods=['GET'])
-def get_matches():
-    session = Session(engine)
+def matches():
+    session = Session(engine)  # Create a new session for each request
     try:
-        # Capture selected symptoms from query parameters
-        selected_symptoms = request.args.get('symptoms', "").split(',')
-        
-        if not selected_symptoms or selected_symptoms == ['']:
-            return jsonify({"error": "No symptoms provided"}), 400
+        # Extract selectedSymptom_ids from query parameters
+        selectedSymptom_ids = request.args.get('symptom_ids')
+        if not selectedSymptom_ids:
+            return jsonify({"error": "No symptoms provided", "message": "Provide symptoms as a comma-separated list in the query string"}), 400
 
-        # Join tables to fetch matches for selected symptoms
-        matches_query = session.query(DiseaseSymptom, Diseases).join(
-            Diseases,
-            DiseaseSymptom.c.disease_id == Diseases.c.disease_id
-        ).filter(DiseaseSymptom.c.s_name.in_(selected_symptoms)).all()
+        # Parse the symptom IDs from the query string
+        selectedSymptom_ids = selectedSymptom_ids.split(',')
 
-        if not matches_query:
-            return jsonify({"error": "No matches found"}), 404
+        # Lookup symptom names for the selected symptom IDs
+        symptom_names = []
+        for symptom_id in selectedSymptom_ids:
+            result = session.query(Symptoms).filter_by(symptom_id=symptom_id).first()
+            if result:
+                symptom_names.append(result.s_name)
 
-        # Aggregate matches
-        matches = {}
-        for row in matches_query:
-            disease = row[1]
-            symptom = row[0]
-            if disease.d_name not in matches:
-                matches[disease.d_name] = {
-                    "d_name": disease.d_name,
-                    "s_name": [],
-                    "frequency": 0
-                }
-            matches[disease.d_name]["s_name"].append(symptom.s_name)
-            matches[disease.d_name]["frequency"] += 1
+        # Prepare the test input for the model
+        test_input = pd.DataFrame([{symptom_id: 1 for symptom_id in selectedSymptom_ids}], columns=binary_features).fillna(0)
+        test_input_scaled = scaler.transform(test_input)
 
-        # Calculate probabilities
-        total_frequency = sum(match["frequency"] for match in matches.values())
-        matches_json = [
-            {
-                "d_name": match["d_name"],
-                "s_name": match["s_name"],
-                "probability": f"{(match['frequency'] / total_frequency) * 100:.2f}%"
-            }
-            for match in matches.values()
-        ]
+        # Predict using the trained model
+        probabilities = model.predict(test_input_scaled)
+        top_indices = np.argsort(probabilities[0])[-3:][::-1]  # Top 3 probabilities
+
+        # Retrieve disease details for top predictions
+        matches_response = []
+        for index in top_indices:
+            # Get the disease ID based on prediction index
+            disease_id = disease_symptom_hotcoded.iloc[index]['disease_id']
+
+            # Lookup disease details from the database
+            disease_result = session.query(Diseases).filter_by(disease_id=disease_id).first()
+            if disease_result:
+                # Lookup associated symptoms for this disease
+                associated_symptoms = session.query(DiseaseSymptom).filter_by(disease_id=disease_id).all()
+                symptom_list = [symptom.s_name for symptom in associated_symptoms]
+
+                # Build match entry
+                matches_response.append({
+                    "d_name": disease_result.d_name,
+                    "description": disease_result.Description,  # Include disease description
+                    "s_name": symptom_list,
+                    "probability": f"{probabilities[0][index] * 100:.2f}%"
+                })
+
     except Exception as e:
-        return jsonify({"error": "Database Error", "message": str(e)}), 500
+        return jsonify({"error": "Error generating matches", "message": str(e)}), 500
     finally:
-        session.close()
+        session.close()  # Always close the session
 
-    return jsonify({"matches": matches_json}), 200
+    return jsonify({"matches": matches_response}), 200
+
 
 if __name__ == '__main__':
     app.run(debug=True)
