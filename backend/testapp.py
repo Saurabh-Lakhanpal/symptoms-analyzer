@@ -134,87 +134,35 @@ def get_diseases():
     return jsonify({"diseases": diseases}), 200
 
 #=============== GET ALL MATCHES =================================================
+# api get call looks like this - http://127.0.0.1:5000/api.01/matches?symptom_ids=C0085593,C0746619,C0030193,C0004093,C0004604
+# use this dict and fake the response for the above route
+# // matches.json
+# {
+#     "matches": [
+#       {
+#         "d_name": "Hypertensive Disease",
+#         "description":["Chronic high blood pressure increases risk of heart disease, stroke, and kidney damage."],
+#         "s_name": ["Pain Chest", "Shortness of Breath", "Dizziness", "Asthenia", "Fall", "Syncope", "Vertigo", "Sweating Increased", "Palpitation", "Nausea", "Angina Pectoris", "Pressure Chest"],
+#         "probability": "27.36%"
+#       },
+#       {
+#         "d_name": "Diabetes",
+#         "description":["A metabolic disorder causing elevated blood sugar levels due to insulin issues."],
+#         "s_name": ["Polyuria", "Polydypsia", "Shortness of Breath", "Pain Chest", "Asthenia", "Nausea", "Orthopnea", "Rale", "Sweating Increased", "Unresponsiveness", "Mental Status Changes", "Vertigo", "Vomiting", "Labored Breathing"],
+#         "probability": "18.38%"
+#       },
+#       {
+#         "d_name": "depression mental",
+#         "description":["A condition marked by persistent sadness, low energy, and loss of interest."],
+#         "s_name": ["Feeling Suicidal", "Suicidal", "Hallucinations Auditory", "Feeling Hopeless", "Weepiness", "Sleeplessness", "Motor Retardation", "Irritable Mood", "Blackout", "Mood Depressed", "Hallucinations Visual", "Worry", "Agitation", "Tremor", "Intoxication", "Verbal Auditory Hallucinations", "Energy Increased", "Difficulty", "Nightmare", "Unable to Concentrate", "Homelessness"],
+#         "probability": "09.29%"
+#       }
+#     ]
+#   }
+  
+
 @app.route('/api.01/matches', methods=['GET'])
-def matches():
-    session = Session(engine)
-    try:
-        # Step 1: Extract selectedSymptom_ids from query parameters
-        selectedSymptom_ids = request.args.get('symptom_ids')
-        if not selectedSymptom_ids:
-            return jsonify({"error": "No symptoms provided", "message": "Provide symptoms as a comma-separated list in the query string"}), 400
 
-        selectedSymptom_ids = selectedSymptom_ids.split(',')
-        print("Selected Symptom IDs:", selectedSymptom_ids)
-
-        # Step 2: Query symptom names from the database
-        symptom_names = []
-        for symptom_id in selectedSymptom_ids:
-            result = session.query(Symptoms).filter_by(symptom_id=symptom_id).first()
-            if result:
-                symptom_names.append(result.s_name)
-            else:
-                print(f"Symptom ID {symptom_id} not found.")
-        print("Symptom Names:", symptom_names)
-
-        # Step 3: Query the database table symptom_disease_tb and create symptom_disease_df
-        input = pd.DataFrame([{symptom_id: 1 for symptom_id in selectedSymptom_ids}], columns=binary_features).fillna(0)
-        print("Test Input DataFrame:\n", input.head())
-
-        # Step 4: balance it, scale it, one hot code it
-        input_scaled = scaler.transform(input)
-        print("Scaled Test Input:\n", input_scaled)
-
-        # Step 5: Predict disease probabilities from the model 
-        probabilities = model.predict(input_scaled)
-        print("Predicted Probabilities:", probabilities)
-
-        # Step 6: Get top 3 indices based on predicted probabilities
-        top_indices = np.argsort(probabilities[0])[-3:][::-1]
-        print("Top Indices:", top_indices)
-        print("Disease Symptom Hotcoded Shape:", disease_symptom_hotcoded.shape)
-
-        # Step 7: Fetch matching diseases and their details
-        matches_response = []
-        for index in top_indices:
-            if index >= len(disease_symptom_hotcoded):
-                print(f"Index {index} is out of bounds for disease_symptom_hotcoded.")
-                continue
-
-            # Safely access rows and disease_id
-            row = disease_symptom_hotcoded.iloc[index]
-            if isinstance(row, pd.DataFrame):
-                row = row.squeeze()
-            print("Accessed Row:", row)
-            disease_id = row['disease_id']
-            print(f"Disease ID at index {index}: {disease_id}")
-
-            # Query disease details
-            disease_result = session.query(Diseases).filter_by(disease_id=disease_id).first()
-            if disease_result:
-                associated_symptoms = session.query(DiseaseSymptom).filter_by(disease_id=disease_id).all()
-                symptom_list = [session.query(Symptoms).filter_by(symptom_id=s.symptom_id).first().s_name for s in associated_symptoms]
-                print(f"Associated Symptoms for Disease ID {disease_id}: {symptom_list}")
-
-                # Build match entry
-                matches_response.append({
-                    "d_name": disease_result.d_name,
-                    "description": [disease_result.description],
-                    "s_name": symptom_list,
-                    "probability": f"{probabilities[0][index] * 100:.2f}%"
-                })
-
-        # Step 8: Handle case where no matches are found
-        if not matches_response:
-            return jsonify({"error": "No matches found", "message": "No diseases match the provided symptoms."}), 404
-
-    except Exception as e:
-        print("Error encountered:", str(e))
-        return jsonify({"error": "Error generating matches", "message": str(e)}), 500
-    finally:
-        session.close()
-
-    # Step 9: Return successful matches response
-    return jsonify({"matches": matches_response}), 200
 
 
 if __name__ == '__main__':

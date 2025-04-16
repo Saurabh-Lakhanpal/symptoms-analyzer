@@ -1,8 +1,8 @@
 // matches.js
 
 // Function to fetch matching diseases based on selected symptoms
-async function fetchMatches(selectedSymptoms) {
-    const matchesUrl = `${window.baseUrl}/api.01/matches?symptoms=${selectedSymptoms.join(',')}`; 
+async function fetchMatches(selectedSymptom_ids) {
+    const matchesUrl = `${window.baseUrl}/api.01/matches?symptoms=${selectedSymptom_ids.join(',')}`; 
     try {
         const response = await fetch(matchesUrl);
         if (!response.ok) {
@@ -35,7 +35,7 @@ function populateRelatedSymptoms(matches) {
                 class="symptom-checkbox" 
                 id="${symptomName}" 
                 data-symptom="${symptomName}" 
-                ${selectedSymptoms.includes(symptomName) ? 'checked' : ''}
+                ${selectedSymptom_ids.includes(symptomName) ? 'checked' : ''}
             >
             <label for="${symptomName}">${symptomName}</label>
         `;
@@ -74,28 +74,28 @@ function populateRelatedSymptoms(matches) {
 
 // Function to add a symptom to the selected list
 function addSelectedSymptom(symptomName) {
-    if (!selectedSymptoms.includes(symptomName)) {
-        selectedSymptoms.push(symptomName); 
-        updateSelectedSymptomsUI(); 
+    if (!selectedSymptom_ids.includes(symptomName)) {
+        selectedSymptom_ids.push(symptomName); 
+        updateSelectedSymptom_idsUI(); 
     }
 }
 
 // Function to remove a symptom from the selected list
 function removeSelectedSymptom(symptomName) {
-    selectedSymptoms = selectedSymptoms.filter(symptom => symptom !== symptomName);
-    updateSelectedSymptomsUI(); 
+    selectedSymptom_ids = selectedSymptom_ids.filter(symptom => symptom !== symptomName);
+    updateSelectedSymptom_idsUI(); 
 }
 
 // Function to update the "Selected Symptoms" section dynamically
-function updateSelectedSymptomsUI() {
-    const selectedSymptomsDiv = document.getElementById('selected-symptoms');
+function updateSelectedSymptom_idsUI() {
+    const selectedSymptom_idsDiv = document.getElementById('selected-symptoms');
     
-    if (selectedSymptoms.length === 0) {
+    if (selectedSymptom_ids.length === 0) {
         // If no symptoms are selected, show the default text
-        selectedSymptomsDiv.innerHTML = "Selected Symptoms";
+        selectedSymptom_idsDiv.innerHTML = "Selected Symptoms";
     } else {
         // Display the selected symptoms with "X" buttons
-        selectedSymptomsDiv.innerHTML = selectedSymptoms.map(symptom => `
+        selectedSymptom_idsDiv.innerHTML = selectedSymptom_ids.map(symptom => `
             <div class="selected-symptom">
                 <button class="remove-symptom" data-symptom="${symptom}">x</button>
                 ${symptom}
@@ -122,12 +122,12 @@ function updateSelectedSymptomsUI() {
 async function analyzeSymptoms() {
     const analyzeButton = document.getElementById('cta');
     analyzeButton.addEventListener('click', async () => {
-        if (selectedSymptoms.length === 0) {
+        if (selectedSymptom_ids.length === 0) {
             alert("Please select at least one symptom to analyze.");
             return;
         }
 
-        const matches = await fetchMatches(selectedSymptoms); 
+        const matches = await fetchMatches(selectedSymptom_ids); 
         populateRelatedSymptoms(matches); 
     });
 }

@@ -2,6 +2,7 @@
 
 // Global variable to store selected symptoms
 let selectedSymptoms = [];
+let selectedSymptom_ids = [];
 
 // Asynchronous function for fetching symptoms from the API
 async function fetchSymptoms(searchTerm) {
