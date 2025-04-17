@@ -112,7 +112,7 @@ symptoms-analyzer
 - **Source:** [DiseaseSymptom Knowledge Base (DSKB)](https://people.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html)
 - **Description:** The DSKB dataset contains relationships between diseases and symptoms. This structured data provides a rich source of labeled data for supervised learning.
 - **Size:** Over 149 different diseases and 407 different symptoms, ranked.
-- **Mock hot-coded data** 5000 rows 38 mock patients for each disease.
+- **Mock hot-coded data:** 5000 rows 38 mock patients for each disease.
 
 ---
 

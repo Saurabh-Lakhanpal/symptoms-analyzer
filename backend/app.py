@@ -5,7 +5,8 @@ from sqlalchemy.orm import Session
 import pandas as pd
 import numpy as np
 import pickle
-from tensorflow.keras.models import load_model  # Import for loading the model
+from tensorflow.keras.models import load_model
+import os
 
 # PostgreSQL Database Setup
 db_params = {
@@ -30,15 +31,15 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Load scaler globally
-with open(r'C:\Users\Saurabh Lakhanpal\OneDrive\DA-UofT\UofTSubmissions\Module-23-24-Challenge-Project 4\symptoms-analyzer\backend\models\scaler.pkl', 'rb') as f:
+with open('backend/models/scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
 # Load binary_features globally
-with open(r'C:\Users\Saurabh Lakhanpal\OneDrive\DA-UofT\UofTSubmissions\Module-23-24-Challenge-Project 4\symptoms-analyzer\backend\models\binary_features.pkl', 'rb') as f:
+with open('backend/models/binary_features.pkl', 'rb') as f:
     binary_features = pickle.load(f)
 
 # Load the trained model globally
-model = load_model(r'C:\Users\Saurabh Lakhanpal\OneDrive\DA-UofT\UofTSubmissions\Module-23-24-Challenge-Project 4\symptoms-analyzer\backend\models\disease_prediction_model.h5')
+model = load_model('backend/models/disease_prediction_model.h5')
 
 # Dynamically recreate disease_symptom_hotcoded
 session = Session(engine)
