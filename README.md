@@ -83,3 +83,39 @@ The main purpose of this project is to provide users with a more accurate and re
 ### References
 - DiseaseSymptomKB: [Dataset Link](https://people.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html)
 
+symptoms-analyzer
+├── backend
+│   ├── models
+│   │   ├── binary_features.pkl
+│   │   ├── disease_prediction_model.h5
+│   │   └── scaler.pkl
+│   ├── app.py
+│   ├── etl.ipynb
+│   ├── mock_training_data.ipynb
+│   ├── model.ipynb
+│   └── schema.sql
+├── frontend
+│   ├── assets
+│   │   ├── logo.svg
+│   │   └── background.svg
+│   ├── css
+│   │   └── styles.css
+│   ├── js
+│   │   ├── config.js
+│   │   ├── matches.js
+│   │   └── search.js
+│   └── index.html
+├── resources
+│   ├── data
+│   │   ├── disease_description.txt
+│   │   ├── disease_symptom_data.csv
+│   │   └── disease_symptom_hotcoded_train.csv
+│   ├── dummy_json
+│   │   ├── dummy_diseases.json
+│   │   ├── dummy_matches.json
+│   │   └── dummy_symptoms.json
+│   ├── model_iterations
+│   │   ├── model_iteration_1.ipynb
+│   │   └── model_iteration_2.ipynb
+│   └── wireframe.png
+└── README.md

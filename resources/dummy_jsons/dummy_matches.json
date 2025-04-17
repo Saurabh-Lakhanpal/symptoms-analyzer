@@ -1,0 +1,24 @@
+// matches.json
+{
+    "matches": [
+      {
+        "d_name": "Hypertensive Disease",
+        "description":["Chronic high blood pressure increases risk of heart disease, stroke, and kidney damage."],
+        "s_name": ["Pain Chest", "Shortness of Breath", "Dizziness", "Asthenia", "Fall", "Syncope", "Vertigo", "Sweating Increased", "Palpitation", "Nausea", "Angina Pectoris", "Pressure Chest"],
+        "probability": "27.36%"
+      },
+      {
+        "d_name": "Diabetes",
+        "description":["A metabolic disorder causing elevated blood sugar levels due to insulin issues."],
+        "s_name": ["Polyuria", "Polydypsia", "Shortness of Breath", "Pain Chest", "Asthenia", "Nausea", "Orthopnea", "Rale", "Sweating Increased", "Unresponsiveness", "Mental Status Changes", "Vertigo", "Vomiting", "Labored Breathing"],
+        "probability": "18.38%"
+      },
+      {
+        "d_name": "depression mental",
+        "description":["A condition marked by persistent sadness, low energy, and loss of interest."],
+        "s_name": ["Feeling Suicidal", "Suicidal", "Hallucinations Auditory", "Feeling Hopeless", "Weepiness", "Sleeplessness", "Motor Retardation", "Irritable Mood", "Blackout", "Mood Depressed", "Hallucinations Visual", "Worry", "Agitation", "Tremor", "Intoxication", "Verbal Auditory Hallucinations", "Energy Increased", "Difficulty", "Nightmare", "Unable to Concentrate", "Homelessness"],
+        "probability": "09.29%"
+      }
+    ]
+  }
+  
