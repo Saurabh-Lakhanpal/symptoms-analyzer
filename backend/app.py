@@ -193,13 +193,20 @@ def matches():
             disease_result = session.query(Diseases).filter_by(disease_id=disease_id).first()
             if disease_result:
                 associated_symptoms = session.query(DiseaseSymptom).filter_by(disease_id=disease_id).all()
-                symptom_list = [session.query(Symptoms).filter_by(symptom_id=s.symptom_id).first().s_name for s in associated_symptoms]
-                print(f"Associated Symptoms for Disease ID {disease_id}: {symptom_list}")
+                
+                # Fetch symptom IDs and names for the matching disease
+                symptom_list = [
+                    {
+                        "symptom_id": session.query(Symptoms).filter_by(symptom_id=s.symptom_id).first().symptom_id,
+                        "s_name": session.query(Symptoms).filter_by(symptom_id=s.symptom_id).first().s_name
+                    }
+                    for s in associated_symptoms
+                ]
 
                 matches_response.append({
                     "d_name": disease_result.d_name,
                     "description": [disease_result.description],
-                    "s_name": symptom_list,
+                    "symptoms": symptom_list,  # Updated key to include symptom IDs and names
                     "probability": f"{probabilities[0][index] * 100:.2f}%"
                 })
 

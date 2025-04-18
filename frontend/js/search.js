@@ -60,6 +60,8 @@ function showSuggestions(suggestions) {
     suggestionBox.style.border = '1px solid #ccc';
     suggestionBox.style.borderRadius = '5px';
     suggestionBox.style.zIndex = '1000';
+    suggestionBox.style.maxHeight = '200';
+    suggestionBox.style.overflowY = 'auto';
 
     // Populate suggestions with checkboxes
     suggestionBox.innerHTML = suggestions.map(suggestion => {

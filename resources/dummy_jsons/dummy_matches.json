@@ -6,27 +6,87 @@
         "A Condition Where Low Red Blood Cells Reduce Oxygen Delivery To Tissues."
       ],
       "probability": "97.72%",
-      "s_name": [
-        "Chill",
-        "Guaiac Positive",
-        "Monoclonal",
-        "Ecchymosis",
-        "Tumor Cell Invasion",
-        "Haemorrhage",
-        "Pallor",
-        "Asthenia",
-        "Fatigue",
-        "Heme Positive",
-        "Pain Back",
-        "Orthostasis",
-        "Hyponatremia",
-        "Dizziness",
-        "Shortness Of Breath",
-        "Pain",
-        "Rhonchus",
-        "Arthralgia",
-        "Swelling",
-        "Transaminitis"
+      "symptoms": [
+        {
+          "s_name": "Chill",
+          "symptom_id": "C0085593"
+        },
+        {
+          "s_name": "Guaiac Positive",
+          "symptom_id": "C0744492"
+        },
+        {
+          "s_name": "Monoclonal",
+          "symptom_id": "C0746619"
+        },
+        {
+          "s_name": "Ecchymosis",
+          "symptom_id": "C0013491"
+        },
+        {
+          "s_name": "Tumor Cell Invasion",
+          "symptom_id": "C1269955"
+        },
+        {
+          "s_name": "Haemorrhage",
+          "symptom_id": "C0019080"
+        },
+        {
+          "s_name": "Pallor",
+          "symptom_id": "C0030232"
+        },
+        {
+          "s_name": "Asthenia",
+          "symptom_id": "C0004093"
+        },
+        {
+          "s_name": "Fatigue",
+          "symptom_id": "C0015672"
+        },
+        {
+          "s_name": "Heme Positive",
+          "symptom_id": "C0744740"
+        },
+        {
+          "s_name": "Pain Back",
+          "symptom_id": "C0004604"
+        },
+        {
+          "s_name": "Orthostasis",
+          "symptom_id": "C0149746"
+        },
+        {
+          "s_name": "Hyponatremia",
+          "symptom_id": "C0020625"
+        },
+        {
+          "s_name": "Dizziness",
+          "symptom_id": "C0012833"
+        },
+        {
+          "s_name": "Shortness Of Breath",
+          "symptom_id": "C0392680"
+        },
+        {
+          "s_name": "Pain",
+          "symptom_id": "C0030193"
+        },
+        {
+          "s_name": "Rhonchus",
+          "symptom_id": "C0035508"
+        },
+        {
+          "s_name": "Arthralgia",
+          "symptom_id": "C0003862"
+        },
+        {
+          "s_name": "Swelling",
+          "symptom_id": "C0038999"
+        },
+        {
+          "s_name": "Transaminitis",
+          "symptom_id": "C1096646"
+        }
       ]
     },
     {
@@ -35,16 +95,43 @@
         "A Type Of Skin Cancer That Develops In Pigment-Producing Cells, Often Triggered By Sun Exposure."
       ],
       "probability": "1.42%",
-      "s_name": [
-        "Mass Of Body Structure",
-        "Paraparesis",
-        "Fever",
-        "Gravida 0",
-        "Pain",
-        "Pruritus",
-        "Mass In Breast",
-        "Vomiting",
-        "Diarrhea"
+      "symptoms": [
+        {
+          "s_name": "Mass Of Body Structure",
+          "symptom_id": "C0577559"
+        },
+        {
+          "s_name": "Paraparesis",
+          "symptom_id": "C0221166"
+        },
+        {
+          "s_name": "Fever",
+          "symptom_id": "C0015967"
+        },
+        {
+          "s_name": "Gravida 0",
+          "symptom_id": "C0232995"
+        },
+        {
+          "s_name": "Pain",
+          "symptom_id": "C0030193"
+        },
+        {
+          "s_name": "Pruritus",
+          "symptom_id": "C0033774"
+        },
+        {
+          "s_name": "Mass In Breast",
+          "symptom_id": "C0024103"
+        },
+        {
+          "s_name": "Vomiting",
+          "symptom_id": "C0042963"
+        },
+        {
+          "s_name": "Diarrhea",
+          "symptom_id": "C0011991"
+        }
       ]
     },
     {
@@ -53,18 +140,51 @@
         "A Genetic Blood Disorder Causing Abnormally Shaped Red Blood Cells, Leading To Pain And Fatigue."
       ],
       "probability": "0.25%",
-      "s_name": [
-        "Breakthrough Pain",
-        "Pain Back",
-        "Pain",
-        "Shortness Of Breath",
-        "Snuffle",
-        "Pain Chest",
-        "Pain Abdominal",
-        "Hepatosplenomegaly",
-        "Green Sputum",
-        "Apyrexial",
-        "Headache"
+      "symptoms": [
+        {
+          "s_name": "Breakthrough Pain",
+          "symptom_id": "C1135120"
+        },
+        {
+          "s_name": "Pain Back",
+          "symptom_id": "C0004604"
+        },
+        {
+          "s_name": "Pain",
+          "symptom_id": "C0030193"
+        },
+        {
+          "s_name": "Shortness Of Breath",
+          "symptom_id": "C0392680"
+        },
+        {
+          "s_name": "Snuffle",
+          "symptom_id": "C1260880"
+        },
+        {
+          "s_name": "Pain Chest",
+          "symptom_id": "C0008031"
+        },
+        {
+          "s_name": "Pain Abdominal",
+          "symptom_id": "C0000737"
+        },
+        {
+          "s_name": "Hepatosplenomegaly",
+          "symptom_id": "C0019214"
+        },
+        {
+          "s_name": "Green Sputum",
+          "symptom_id": "C0457097"
+        },
+        {
+          "s_name": "Apyrexial",
+          "symptom_id": "C0277797"
+        },
+        {
+          "s_name": "Headache",
+          "symptom_id": "C0018681"
+        }
       ]
     }
   ]

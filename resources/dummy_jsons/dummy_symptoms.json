@@ -1,35 +1,1629 @@
 // symptoms.json
 {
-    "symptoms": [
-      { "symptom_id": "C0008031", "s_name": "Pain Chest" },
-      { "symptom_id": "C0392680", "s_name": "Shortness of Breath" },
-      { "symptom_id": "C0012833", "s_name": "Dizziness" },
-      { "symptom_id": "C0004093", "s_name": "Asthenia" },
-      { "symptom_id": "C0085639", "s_name": "Fall" },
-      { "symptom_id": "C0039070", "s_name": "Syncope" },
-      { "symptom_id": "C0042571", "s_name": "Vertigo" },
-      { "symptom_id": "C0038990", "s_name": "Sweating Increased" },
-      { "symptom_id": "C0030252", "s_name": "Palpitation" },
-      { "symptom_id": "C0027497", "s_name": "Nausea" },
-      { "symptom_id": "C0002962", "s_name": "Angina Pectoris" },
-      { "symptom_id": "C0438716", "s_name": "Pressure Chest" },
-      { "symptom_id": "C0032617", "s_name": "Polyuria" },
-      { "symptom_id": "C0085602", "s_name": "Polydypsia" },
-      { "symptom_id": "C0085619", "s_name": "Orthopnea" },
-      { "symptom_id": "C0034642", "s_name": "Rale" },
-      { "symptom_id": "C0241526", "s_name": "Unresponsiveness" },
-      { "symptom_id": "C0856054", "s_name": "Mental Status Changes" },
-      { "symptom_id": "C0042963", "s_name": "Vomiting" },
-      { "symptom_id": "C0553668", "s_name": "Labored Breathing" },
-      { "symptom_id": "C0424000", "s_name": "Feeling Suicidal" },
-      { "symptom_id": "C0438696", "s_name": "Suicidal" },
-      { "symptom_id": "C0233762", "s_name": "Hallucinations Auditory" },
-      { "symptom_id": "C0150041", "s_name": "Feeling Hopeless" },
-      { "symptom_id": "C0424109", "s_name": "Weepiness" },
-      { "symptom_id": "C0917801", "s_name": "Sleeplessness" },
-      { "symptom_id": "C0424230", "s_name": "Motor Retardation" },
-      { "symptom_id": "C0022107", "s_name": "Irritable Mood" },
-      { "symptom_id": "C0312422", "s_name": "Blackout" }
-    ]
-  }
-  
+  "symptoms": [
+    {
+      "s_name": "Pain Chest",
+      "symptom_id": "C0008031"
+    },
+    {
+      "s_name": "Shortness Of Breath",
+      "symptom_id": "C0392680"
+    },
+    {
+      "s_name": "Dizziness",
+      "symptom_id": "C0012833"
+    },
+    {
+      "s_name": "Asthenia",
+      "symptom_id": "C0004093"
+    },
+    {
+      "s_name": "Fall",
+      "symptom_id": "C0085639"
+    },
+    {
+      "s_name": "Syncope",
+      "symptom_id": "C0039070"
+    },
+    {
+      "s_name": "Vertigo",
+      "symptom_id": "C0042571"
+    },
+    {
+      "s_name": "Sweat",
+      "symptom_id": "C0038990"
+    },
+    {
+      "s_name": "Sweating Increased",
+      "symptom_id": "C0700590"
+    },
+    {
+      "s_name": "Palpitation",
+      "symptom_id": "C0030252"
+    },
+    {
+      "s_name": "Nausea",
+      "symptom_id": "C0027497"
+    },
+    {
+      "s_name": "Angina Pectoris",
+      "symptom_id": "C0002962"
+    },
+    {
+      "s_name": "Pressure Chest",
+      "symptom_id": "C0438716"
+    },
+    {
+      "s_name": "Polyuria",
+      "symptom_id": "C0032617"
+    },
+    {
+      "s_name": "Polydypsia",
+      "symptom_id": "C0085602"
+    },
+    {
+      "s_name": "Orthopnea",
+      "symptom_id": "C0085619"
+    },
+    {
+      "s_name": "Rale",
+      "symptom_id": "C0034642"
+    },
+    {
+      "s_name": "Unresponsiveness",
+      "symptom_id": "C0241526"
+    },
+    {
+      "s_name": "Mental Status Changes",
+      "symptom_id": "C0856054"
+    },
+    {
+      "s_name": "Vomiting",
+      "symptom_id": "C0042963"
+    },
+    {
+      "s_name": "Labored Breathing",
+      "symptom_id": "C0553668"
+    },
+    {
+      "s_name": "Feeling Suicidal",
+      "symptom_id": "C0424000"
+    },
+    {
+      "s_name": "Suicidal",
+      "symptom_id": "C0438696"
+    },
+    {
+      "s_name": "Hallucinations Auditory",
+      "symptom_id": "C0233762"
+    },
+    {
+      "s_name": "Feeling Hopeless",
+      "symptom_id": "C0150041"
+    },
+    {
+      "s_name": "Weepiness",
+      "symptom_id": "C0424109"
+    },
+    {
+      "s_name": "Sleeplessness",
+      "symptom_id": "C0917801"
+    },
+    {
+      "s_name": "Motor Retardation",
+      "symptom_id": "C0424230"
+    },
+    {
+      "s_name": "Irritable Mood",
+      "symptom_id": "C0022107"
+    },
+    {
+      "s_name": "Blackout",
+      "symptom_id": "C0312422"
+    },
+    {
+      "s_name": "Mood Depressed",
+      "symptom_id": "C0344315"
+    },
+    {
+      "s_name": "Hallucinations Visual",
+      "symptom_id": "C0233763"
+    },
+    {
+      "s_name": "Worry",
+      "symptom_id": "C0233481"
+    },
+    {
+      "s_name": "Agitation",
+      "symptom_id": "C0085631"
+    },
+    {
+      "s_name": "Tremor",
+      "symptom_id": "C0040822"
+    },
+    {
+      "s_name": "Intoxication",
+      "symptom_id": "C0728899"
+    },
+    {
+      "s_name": "Verbal Auditory Hallucinations",
+      "symptom_id": "C0424068"
+    },
+    {
+      "s_name": "Energy Increased",
+      "symptom_id": "C0455769"
+    },
+    {
+      "s_name": "Difficulty",
+      "symptom_id": "C1299586"
+    },
+    {
+      "s_name": "Nightmare",
+      "symptom_id": "C0028084"
+    },
+    {
+      "s_name": "Unable To Concentrate",
+      "symptom_id": "C0235198"
+    },
+    {
+      "s_name": "Homelessness",
+      "symptom_id": "C0237154"
+    },
+    {
+      "s_name": "Hypokinesia",
+      "symptom_id": "C0086439"
+    },
+    {
+      "s_name": "Dyspnea On Exertion",
+      "symptom_id": "C0231807"
+    },
+    {
+      "s_name": "Chest Tightness",
+      "symptom_id": "C0232292"
+    },
+    {
+      "s_name": "Cough",
+      "symptom_id": "C0010200"
+    },
+    {
+      "s_name": "Fever",
+      "symptom_id": "C0015967"
+    },
+    {
+      "s_name": "Decreased Translucency",
+      "symptom_id": "C0029053"
+    },
+    {
+      "s_name": "Productive Cough",
+      "symptom_id": "C0239134"
+    },
+    {
+      "s_name": "Pleuritic Pain",
+      "symptom_id": "C0008033"
+    },
+    {
+      "s_name": "Yellow Sputum",
+      "symptom_id": "C0457096"
+    },
+    {
+      "s_name": "Breath Sounds Decreased",
+      "symptom_id": "C0238844"
+    },
+    {
+      "s_name": "Chill",
+      "symptom_id": "C0085593"
+    },
+    {
+      "s_name": "Rhonchus",
+      "symptom_id": "C0035508"
+    },
+    {
+      "s_name": "Green Sputum",
+      "symptom_id": "C0457097"
+    },
+    {
+      "s_name": "Non-Productive Cough",
+      "symptom_id": "C0850149"
+    },
+    {
+      "s_name": "Wheezing",
+      "symptom_id": "C0043144"
+    },
+    {
+      "s_name": "Haemoptysis",
+      "symptom_id": "C0019079"
+    },
+    {
+      "s_name": "Distress Respiratory",
+      "symptom_id": "C0476273"
+    },
+    {
+      "s_name": "Tachypnea",
+      "symptom_id": "C0231835"
+    },
+    {
+      "s_name": "Malaise",
+      "symptom_id": "C0231218"
+    },
+    {
+      "s_name": "Night Sweat",
+      "symptom_id": "C0028081"
+    },
+    {
+      "s_name": "Jugular Venous Distention",
+      "symptom_id": "C0240100"
+    },
+    {
+      "s_name": "Dyspnea",
+      "symptom_id": "C0013404"
+    },
+    {
+      "s_name": "Dysarthria",
+      "symptom_id": "C0013362"
+    },
+    {
+      "s_name": "Speech Slurred",
+      "symptom_id": "C0234518"
+    },
+    {
+      "s_name": "Facial Paresis",
+      "symptom_id": "C0427055"
+    },
+    {
+      "s_name": "Hemiplegia",
+      "symptom_id": "C0018991"
+    },
+    {
+      "s_name": "Seizure",
+      "symptom_id": "C0036572"
+    },
+    {
+      "s_name": "Numbness",
+      "symptom_id": "C0028643"
+    },
+    {
+      "s_name": "Symptom Aggravating Factors",
+      "symptom_id": "C0436331"
+    },
+    {
+      "s_name": "St Segment Elevation",
+      "symptom_id": "C0520886"
+    },
+    {
+      "s_name": "St Segment Depression",
+      "symptom_id": "C0520887"
+    },
+    {
+      "s_name": "T Wave Inverted",
+      "symptom_id": "C0520888"
+    },
+    {
+      "s_name": "Presence Of Q Wave",
+      "symptom_id": "C1305739"
+    },
+    {
+      "s_name": "Chest Discomfort",
+      "symptom_id": "C0235710"
+    },
+    {
+      "s_name": "Bradycardia",
+      "symptom_id": "C0428977"
+    },
+    {
+      "s_name": "Pain",
+      "symptom_id": "C0030193"
+    },
+    {
+      "s_name": "Nonsmoker",
+      "symptom_id": "C0337672"
+    },
+    {
+      "s_name": "Erythema",
+      "symptom_id": "C0041834"
+    },
+    {
+      "s_name": "Hepatosplenomegaly",
+      "symptom_id": "C0019214"
+    },
+    {
+      "s_name": "Pruritus",
+      "symptom_id": "C0033774"
+    },
+    {
+      "s_name": "Diarrhea",
+      "symptom_id": "C0011991"
+    },
+    {
+      "s_name": "Abscess Bacterial",
+      "symptom_id": "C0549483"
+    },
+    {
+      "s_name": "Swelling",
+      "symptom_id": "C0038999"
+    },
+    {
+      "s_name": "Apyrexial",
+      "symptom_id": "C0277797"
+    },
+    {
+      "s_name": "Dysuria",
+      "symptom_id": "C0013428"
+    },
+    {
+      "s_name": "Hematuria",
+      "symptom_id": "C0018965"
+    },
+    {
+      "s_name": "Renal Angle Tenderness",
+      "symptom_id": "C0235634"
+    },
+    {
+      "s_name": "Lethargy",
+      "symptom_id": "C0023380"
+    },
+    {
+      "s_name": "Hyponatremia",
+      "symptom_id": "C0020625"
+    },
+    {
+      "s_name": "Hemodynamically Stable",
+      "symptom_id": "C0578150"
+    },
+    {
+      "s_name": "Difficulty Passing Urine",
+      "symptom_id": "C0241705"
+    },
+    {
+      "s_name": "Consciousness Clear",
+      "symptom_id": "C0239110"
+    },
+    {
+      "s_name": "Guaiac Positive",
+      "symptom_id": "C0744492"
+    },
+    {
+      "s_name": "Monoclonal",
+      "symptom_id": "C0746619"
+    },
+    {
+      "s_name": "Ecchymosis",
+      "symptom_id": "C0013491"
+    },
+    {
+      "s_name": "Tumor Cell Invasion",
+      "symptom_id": "C1269955"
+    },
+    {
+      "s_name": "Haemorrhage",
+      "symptom_id": "C0019080"
+    },
+    {
+      "s_name": "Pallor",
+      "symptom_id": "C0030232"
+    },
+    {
+      "s_name": "Fatigue",
+      "symptom_id": "C0015672"
+    },
+    {
+      "s_name": "Heme Positive",
+      "symptom_id": "C0744740"
+    },
+    {
+      "s_name": "Pain Back",
+      "symptom_id": "C0004604"
+    },
+    {
+      "s_name": "Orthostasis",
+      "symptom_id": "C0149746"
+    },
+    {
+      "s_name": "Arthralgia",
+      "symptom_id": "C0003862"
+    },
+    {
+      "s_name": "Transaminitis",
+      "symptom_id": "C1096646"
+    },
+    {
+      "s_name": "Sputum Purulent",
+      "symptom_id": "C0241235"
+    },
+    {
+      "s_name": "Hypoxemia",
+      "symptom_id": "C0700292"
+    },
+    {
+      "s_name": "Hypercapnia",
+      "symptom_id": "C0020440"
+    },
+    {
+      "s_name": "Patient Non Compliance",
+      "symptom_id": "C0376405"
+    },
+    {
+      "s_name": "Unconscious State",
+      "symptom_id": "C0041657"
+    },
+    {
+      "s_name": "Bedridden",
+      "symptom_id": "C0425251"
+    },
+    {
+      "s_name": "Bedridden",
+      "symptom_id": "C0741453"
+    },
+    {
+      "s_name": "Abdominal Tenderness",
+      "symptom_id": "C0232498"
+    },
+    {
+      "s_name": "Unsteady Gait",
+      "symptom_id": "C1273573"
+    },
+    {
+      "s_name": "Hyperkalemia",
+      "symptom_id": "C0020461"
+    },
+    {
+      "s_name": "Urgency Ofmicturition",
+      "symptom_id": "C0085606"
+    },
+    {
+      "s_name": "Ascites",
+      "symptom_id": "C0003962"
+    },
+    {
+      "s_name": "Hypotension",
+      "symptom_id": "C0020649"
+    },
+    {
+      "s_name": "Enuresis",
+      "symptom_id": "C0014394"
+    },
+    {
+      "s_name": "Asterixis",
+      "symptom_id": "C0232766"
+    },
+    {
+      "s_name": "Muscle Twitch",
+      "symptom_id": "C0231530"
+    },
+    {
+      "s_name": "Sleepy",
+      "symptom_id": "C0234450"
+    },
+    {
+      "s_name": "Headache",
+      "symptom_id": "C0018681"
+    },
+    {
+      "s_name": "Lightheadedness",
+      "symptom_id": "C0220870"
+    },
+    {
+      "s_name": "Food Intolerance",
+      "symptom_id": "C0149696"
+    },
+    {
+      "s_name": "Numbness Of Hand",
+      "symptom_id": "C0239832"
+    },
+    {
+      "s_name": "General Discomfort",
+      "symptom_id": "C0858924"
+    },
+    {
+      "s_name": "Drowsiness",
+      "symptom_id": "C0013144"
+    },
+    {
+      "s_name": "Stiffness",
+      "symptom_id": "C0427008"
+    },
+    {
+      "s_name": "Prostatism",
+      "symptom_id": "C0242453"
+    },
+    {
+      "s_name": "Weight Gain",
+      "symptom_id": "C0043094"
+    },
+    {
+      "s_name": "Tired",
+      "symptom_id": "C0557875"
+    },
+    {
+      "s_name": "Mass Of Body Structure",
+      "symptom_id": "C0577559"
+    },
+    {
+      "s_name": "Has Religious Belief",
+      "symptom_id": "C0557075"
+    },
+    {
+      "s_name": "Nervousness",
+      "symptom_id": "C0027769"
+    },
+    {
+      "s_name": "Formication",
+      "symptom_id": "C0016579"
+    },
+    {
+      "s_name": "Hot Flush",
+      "symptom_id": "C0600142"
+    },
+    {
+      "s_name": "Lesion",
+      "symptom_id": "C0221198"
+    },
+    {
+      "s_name": "Cushingoid Facies",
+      "symptom_id": "C0332601"
+    },
+    {
+      "s_name": "Cushingoidhabitus",
+      "symptom_id": "C0878661"
+    },
+    {
+      "s_name": "Emphysematous Change",
+      "symptom_id": "C0743482"
+    },
+    {
+      "s_name": "Decreased Body Weight",
+      "symptom_id": "C0043096"
+    },
+    {
+      "s_name": "Hoarseness",
+      "symptom_id": "C0019825"
+    },
+    {
+      "s_name": "Thicken",
+      "symptom_id": "C0205400"
+    },
+    {
+      "s_name": "Spontaneous Rupture Of Membranes",
+      "symptom_id": "C0233308"
+    },
+    {
+      "s_name": "Muscle Hypotonia",
+      "symptom_id": "C0026827"
+    },
+    {
+      "s_name": "Hypotonic",
+      "symptom_id": "C0241938"
+    },
+    {
+      "s_name": "Redness",
+      "symptom_id": "C0332575"
+    },
+    {
+      "s_name": "Hypesthesia",
+      "symptom_id": "C0020580"
+    },
+    {
+      "s_name": "Hyperacusis",
+      "symptom_id": "C0034880"
+    },
+    {
+      "s_name": "Scratch Marks",
+      "symptom_id": "C1384489"
+    },
+    {
+      "s_name": "Sore To Touch",
+      "symptom_id": "C0234233"
+    },
+    {
+      "s_name": "Burning Sensation",
+      "symptom_id": "C0085624"
+    },
+    {
+      "s_name": "Satiety Early",
+      "symptom_id": "C0239233"
+    },
+    {
+      "s_name": "Throbbing Sensation Quality",
+      "symptom_id": "C1444773"
+    },
+    {
+      "s_name": "Sensory Discomfort",
+      "symptom_id": "C0234215"
+    },
+    {
+      "s_name": "Constipation",
+      "symptom_id": "C0009806"
+    },
+    {
+      "s_name": "Pain Abdominal",
+      "symptom_id": "C0000737"
+    },
+    {
+      "s_name": "Heartburn",
+      "symptom_id": "C0018834"
+    },
+    {
+      "s_name": "Breech Presentation",
+      "symptom_id": "C0006157"
+    },
+    {
+      "s_name": "Cyanosis",
+      "symptom_id": "C0010520"
+    },
+    {
+      "s_name": "Pain In Lower Limb",
+      "symptom_id": "C0023222"
+    },
+    {
+      "s_name": "Cardiomegaly",
+      "symptom_id": "C0018800"
+    },
+    {
+      "s_name": "Clonus",
+      "symptom_id": "C0009024"
+    },
+    {
+      "s_name": "Unwell",
+      "symptom_id": "C0857256"
+    },
+    {
+      "s_name": "Anorexia",
+      "symptom_id": "C0003123"
+    },
+    {
+      "s_name": "History Of - Blackout",
+      "symptom_id": "C0424533"
+    },
+    {
+      "s_name": "Anosmia",
+      "symptom_id": "C0003126"
+    },
+    {
+      "s_name": "Metastatic Lesion",
+      "symptom_id": "C1513183"
+    },
+    {
+      "s_name": "Hemianopsia Homonymous",
+      "symptom_id": "C0271202"
+    },
+    {
+      "s_name": "Hematocrit Decreased",
+      "symptom_id": "C0744727"
+    },
+    {
+      "s_name": "Neck Stiffness",
+      "symptom_id": "C0151315"
+    },
+    {
+      "s_name": "Cicatrisation",
+      "symptom_id": "C0008767"
+    },
+    {
+      "s_name": "Hypometabolism",
+      "symptom_id": "C0347938"
+    },
+    {
+      "s_name": "Aura",
+      "symptom_id": "C0236018"
+    },
+    {
+      "s_name": "Myoclonus",
+      "symptom_id": "C0027066"
+    },
+    {
+      "s_name": "Gurgle",
+      "symptom_id": "C0232517"
+    },
+    {
+      "s_name": "Wheelchair Bound",
+      "symptom_id": "C0558195"
+    },
+    {
+      "s_name": "Leftatrialhypertrophy",
+      "symptom_id": "C0238705"
+    },
+    {
+      "s_name": "Oliguria",
+      "symptom_id": "C0028961"
+    },
+    {
+      "s_name": "Catatonia",
+      "symptom_id": "C0007398"
+    },
+    {
+      "s_name": "Unhappy",
+      "symptom_id": "C0847488"
+    },
+    {
+      "s_name": "Paresthesia",
+      "symptom_id": "C0030554"
+    },
+    {
+      "s_name": "Gravida 0",
+      "symptom_id": "C0232995"
+    },
+    {
+      "s_name": "Lung Nodule",
+      "symptom_id": "C0034079"
+    },
+    {
+      "s_name": "Distended Abdomen",
+      "symptom_id": "C0000731"
+    },
+    {
+      "s_name": "Ache",
+      "symptom_id": "C0234238"
+    },
+    {
+      "s_name": "Macerated Skin",
+      "symptom_id": "C0558143"
+    },
+    {
+      "s_name": "Heavy Feeling",
+      "symptom_id": "C0581912"
+    },
+    {
+      "s_name": "Rest Pain",
+      "symptom_id": "C0234253"
+    },
+    {
+      "s_name": "Sinus Rhythm",
+      "symptom_id": "C0232201"
+    },
+    {
+      "s_name": "Withdraw",
+      "symptom_id": "C0424092"
+    },
+    {
+      "s_name": "Behavior Hyperactive",
+      "symptom_id": "C0424295"
+    },
+    {
+      "s_name": "Terrify",
+      "symptom_id": "C0558261"
+    },
+    {
+      "s_name": "Photopsia",
+      "symptom_id": "C0085635"
+    },
+    {
+      "s_name": "Giddy Mood",
+      "symptom_id": "C0392701"
+    },
+    {
+      "s_name": "Disturbed Family",
+      "symptom_id": "C0578859"
+    },
+    {
+      "s_name": "Hypersomnia",
+      "symptom_id": "C0917799"
+    },
+    {
+      "s_name": "Hyperhidrosis Disorder",
+      "symptom_id": "C0020458"
+    },
+    {
+      "s_name": "Mydriasis",
+      "symptom_id": "C0026961"
+    },
+    {
+      "s_name": "Extrapyramidal Sign",
+      "symptom_id": "C0234133"
+    },
+    {
+      "s_name": "Loose Associations",
+      "symptom_id": "C0240233"
+    },
+    {
+      "s_name": "Exhaustion",
+      "symptom_id": "C0392674"
+    },
+    {
+      "s_name": "Snore",
+      "symptom_id": "C0037384"
+    },
+    {
+      "s_name": "R Wave Feature",
+      "symptom_id": "C0429091"
+    },
+    {
+      "s_name": "Overweight",
+      "symptom_id": "C0497406"
+    },
+    {
+      "s_name": "Systolic Murmur",
+      "symptom_id": "C0232257"
+    },
+    {
+      "s_name": "Asymptomatic",
+      "symptom_id": "C0231221"
+    },
+    {
+      "s_name": "Splenomegaly",
+      "symptom_id": "C0038002"
+    },
+    {
+      "s_name": "Bleeding Of Vagina",
+      "symptom_id": "C0151706"
+    },
+    {
+      "s_name": "Macule",
+      "symptom_id": "C0332573"
+    },
+    {
+      "s_name": "Photophobia",
+      "symptom_id": "C0085636"
+    },
+    {
+      "s_name": "Painful Swallowing",
+      "symptom_id": "C0221150"
+    },
+    {
+      "s_name": "Cachexia",
+      "symptom_id": "C0006625"
+    },
+    {
+      "s_name": "Hypocalcemia Result",
+      "symptom_id": "C0020598"
+    },
+    {
+      "s_name": "Hypothermia, Natural",
+      "symptom_id": "C0020672"
+    },
+    {
+      "s_name": "Atypia",
+      "symptom_id": "C0741302"
+    },
+    {
+      "s_name": "General Unsteadiness",
+      "symptom_id": "C0427108"
+    },
+    {
+      "s_name": "Throat Sore",
+      "symptom_id": "C0242429"
+    },
+    {
+      "s_name": "Snuffle",
+      "symptom_id": "C1260880"
+    },
+    {
+      "s_name": "Hacking Cough",
+      "symptom_id": "C0239133"
+    },
+    {
+      "s_name": "Stridor",
+      "symptom_id": "C0038450"
+    },
+    {
+      "s_name": "Paresis",
+      "symptom_id": "C0030552"
+    },
+    {
+      "s_name": "Aphagia",
+      "symptom_id": "C0221470"
+    },
+    {
+      "s_name": "Focal Seizures",
+      "symptom_id": "C0751495"
+    },
+    {
+      "s_name": "Abnormal Sensation",
+      "symptom_id": "C0423571"
+    },
+    {
+      "s_name": "Stupor",
+      "symptom_id": "C0085628"
+    },
+    {
+      "s_name": "Fremitus",
+      "symptom_id": "C0231890"
+    },
+    {
+      "s_name": "Stahli'S Line",
+      "symptom_id": "C0271276"
+    },
+    {
+      "s_name": "Stinging Sensation",
+      "symptom_id": "C0677500"
+    },
+    {
+      "s_name": "Paralyse",
+      "symptom_id": "C0522224"
+    },
+    {
+      "s_name": "Hirsutism",
+      "symptom_id": "C0019572"
+    },
+    {
+      "s_name": "Sniffle",
+      "symptom_id": "C0558361"
+    },
+    {
+      "s_name": "Bradykinesia",
+      "symptom_id": "C0233565"
+    },
+    {
+      "s_name": "Out Of Breath",
+      "symptom_id": "C0848168"
+    },
+    {
+      "s_name": "Urge Incontinence",
+      "symptom_id": "C0150045"
+    },
+    {
+      "s_name": "Vision Blurred",
+      "symptom_id": "C0344232"
+    },
+    {
+      "s_name": "Room Spinning",
+      "symptom_id": "C0848277"
+    },
+    {
+      "s_name": "Rambling Speech",
+      "symptom_id": "C0423982"
+    },
+    {
+      "s_name": "Clumsiness",
+      "symptom_id": "C0233844"
+    },
+    {
+      "s_name": "Decreased Stool Caliber",
+      "symptom_id": "C0278014"
+    },
+    {
+      "s_name": "Hematochezia",
+      "symptom_id": "C0018932"
+    },
+    {
+      "s_name": "Egophony",
+      "symptom_id": "C0231872"
+    },
+    {
+      "s_name": "Scar Tissue",
+      "symptom_id": "C0241158"
+    },
+    {
+      "s_name": "Neologism",
+      "symptom_id": "C0233647"
+    },
+    {
+      "s_name": "Decompensation",
+      "symptom_id": "C0231187"
+    },
+    {
+      "s_name": "Stool Color Yellow",
+      "symptom_id": "C0241252"
+    },
+    {
+      "s_name": "Rigor - Temperature-Associated Observation",
+      "symptom_id": "C0424790"
+    },
+    {
+      "s_name": "Paraparesis",
+      "symptom_id": "C0221166"
+    },
+    {
+      "s_name": "Moody",
+      "symptom_id": "C0554980"
+    },
+    {
+      "s_name": "Fear Of Falling",
+      "symptom_id": "C0877040"
+    },
+    {
+      "s_name": "Spasm",
+      "symptom_id": "C0037763"
+    },
+    {
+      "s_name": "Hyperventilation",
+      "symptom_id": "C0020578"
+    },
+    {
+      "s_name": "Excruciating Pain",
+      "symptom_id": "C0278141"
+    },
+    {
+      "s_name": "Gag",
+      "symptom_id": "C0016927"
+    },
+    {
+      "s_name": "Posturing",
+      "symptom_id": "C0872410"
+    },
+    {
+      "s_name": "Pulse Absent",
+      "symptom_id": "C0277899"
+    },
+    {
+      "s_name": "Dysesthesia",
+      "symptom_id": "C0392699"
+    },
+    {
+      "s_name": "Polymyalgia",
+      "symptom_id": "C0521516"
+    },
+    {
+      "s_name": "Passed Stones",
+      "symptom_id": "C0848621"
+    },
+    {
+      "s_name": "Qt Interval Prolonged",
+      "symptom_id": "C0151878"
+    },
+    {
+      "s_name": "Ataxia",
+      "symptom_id": "C0004134"
+    },
+    {
+      "s_name": "Heberden'S Node",
+      "symptom_id": "C0018862"
+    },
+    {
+      "s_name": "Hepatomegaly",
+      "symptom_id": "C0019209"
+    },
+    {
+      "s_name": "Sciatica",
+      "symptom_id": "C0036396"
+    },
+    {
+      "s_name": "Frothy Sputum",
+      "symptom_id": "C0577979"
+    },
+    {
+      "s_name": "Mass In Breast",
+      "symptom_id": "C0024103"
+    },
+    {
+      "s_name": "Retropulsion",
+      "symptom_id": "C0277845"
+    },
+    {
+      "s_name": "Estrogen Use",
+      "symptom_id": "C0239301"
+    },
+    {
+      "s_name": "Hypersomnolence",
+      "symptom_id": "C0751229"
+    },
+    {
+      "s_name": "Underweight",
+      "symptom_id": "C0041667"
+    },
+    {
+      "s_name": "Underweight",
+      "symptom_id": "C1319518"
+    },
+    {
+      "s_name": "Dullness",
+      "symptom_id": "C0541911"
+    },
+    {
+      "s_name": "Red Blotches",
+      "symptom_id": "C0857199"
+    },
+    {
+      "s_name": "Colic Abdominal",
+      "symptom_id": "C0232488"
+    },
+    {
+      "s_name": "Hypokalemia",
+      "symptom_id": "C0020621"
+    },
+    {
+      "s_name": "Hunger",
+      "symptom_id": "C0020175"
+    },
+    {
+      "s_name": "Prostate Tender",
+      "symptom_id": "C0240813"
+    },
+    {
+      "s_name": "Pain Foot",
+      "symptom_id": "C0016512"
+    },
+    {
+      "s_name": "Urinary Hesitation",
+      "symptom_id": "C0152032"
+    },
+    {
+      "s_name": "Disequilibrium",
+      "symptom_id": "C0281825"
+    },
+    {
+      "s_name": "Flushing",
+      "symptom_id": "C0016382"
+    },
+    {
+      "s_name": "Indifferent Mood",
+      "symptom_id": "C0085632"
+    },
+    {
+      "s_name": "Urinoma",
+      "symptom_id": "C1313921"
+    },
+    {
+      "s_name": "Hypoalbuminemia",
+      "symptom_id": "C0239981"
+    },
+    {
+      "s_name": "Pustule",
+      "symptom_id": "C0241157"
+    },
+    {
+      "s_name": "Slowing Of Urinary Stream",
+      "symptom_id": "C0232854"
+    },
+    {
+      "s_name": "Extreme Exhaustion",
+      "symptom_id": "C0277794"
+    },
+    {
+      "s_name": "No Status Change",
+      "symptom_id": "C0442739"
+    },
+    {
+      "s_name": "Breakthrough Pain",
+      "symptom_id": "C1135120"
+    },
+    {
+      "s_name": "Pansystolic Murmur",
+      "symptom_id": "C0232258"
+    },
+    {
+      "s_name": "Systolic Ejection Murmur",
+      "symptom_id": "C0694547"
+    },
+    {
+      "s_name": "Stuffy Nose",
+      "symptom_id": "C0848340"
+    },
+    {
+      "s_name": "Barking Cough",
+      "symptom_id": "C0234866"
+    },
+    {
+      "s_name": "Rapid Shallow Breathing",
+      "symptom_id": "C0425488"
+    },
+    {
+      "s_name": "Noisy Respiration",
+      "symptom_id": "C0237304"
+    },
+    {
+      "s_name": "Nasal Discharge Present",
+      "symptom_id": "C0264273"
+    },
+    {
+      "s_name": "Frail",
+      "symptom_id": "C0871754"
+    },
+    {
+      "s_name": "Cystic Lesion",
+      "symptom_id": "C1511606"
+    },
+    {
+      "s_name": "Projectile Vomiting",
+      "symptom_id": "C0221151"
+    },
+    {
+      "s_name": "Heavy Legs",
+      "symptom_id": "C0581911"
+    },
+    {
+      "s_name": "Titubation",
+      "symptom_id": "C0231690"
+    },
+    {
+      "s_name": "Dysdiadochokinesia",
+      "symptom_id": "C0234979"
+    },
+    {
+      "s_name": "Achalasia",
+      "symptom_id": "C1321756"
+    },
+    {
+      "s_name": "Side Pain",
+      "symptom_id": "C0748706"
+    },
+    {
+      "s_name": "Monocytosis",
+      "symptom_id": "C0085702"
+    },
+    {
+      "s_name": "Posteriorrhinorrhea",
+      "symptom_id": "C0032781"
+    },
+    {
+      "s_name": "Incoherent",
+      "symptom_id": "C0542044"
+    },
+    {
+      "s_name": "Lameness",
+      "symptom_id": "C0311395"
+    },
+    {
+      "s_name": "Claudication",
+      "symptom_id": "C1456822"
+    },
+    {
+      "s_name": "Clammy Skin",
+      "symptom_id": "C0392162"
+    },
+    {
+      "s_name": "Mediastinal Shift",
+      "symptom_id": "C0264576"
+    },
+    {
+      "s_name": "Nausea And Vomiting",
+      "symptom_id": "C0027498"
+    },
+    {
+      "s_name": "Awakening Early",
+      "symptom_id": "C0541798"
+    },
+    {
+      "s_name": "Tenesmus",
+      "symptom_id": "C0232726"
+    },
+    {
+      "s_name": "Fecaluria",
+      "symptom_id": "C1167754"
+    },
+    {
+      "s_name": "Pneumatouria",
+      "symptom_id": "C0232894"
+    },
+    {
+      "s_name": "Todd Paralysis",
+      "symptom_id": "C0234544"
+    },
+    {
+      "s_name": "Alcoholic Withdrawal Symptoms",
+      "symptom_id": "C0740880"
+    },
+    {
+      "s_name": "Myalgia",
+      "symptom_id": "C0231528"
+    },
+    {
+      "s_name": "Dyspareunia",
+      "symptom_id": "C1384606"
+    },
+    {
+      "s_name": "Poor Dentition",
+      "symptom_id": "C0149758"
+    },
+    {
+      "s_name": "Floppy",
+      "symptom_id": "C0857516"
+    },
+    {
+      "s_name": "Inappropriate Affect",
+      "symptom_id": "C0233467"
+    },
+    {
+      "s_name": "Poor Feeding",
+      "symptom_id": "C0576456"
+    },
+    {
+      "s_name": "Moan",
+      "symptom_id": "C0859032"
+    },
+    {
+      "s_name": "Welt",
+      "symptom_id": "C0221232"
+    },
+    {
+      "s_name": "Tinnitus",
+      "symptom_id": "C0040264"
+    },
+    {
+      "s_name": "Hydropneumothorax",
+      "symptom_id": "C0020303"
+    },
+    {
+      "s_name": "Superimposition",
+      "symptom_id": "C0429562"
+    },
+    {
+      "s_name": "Feeling Strange",
+      "symptom_id": "C0235129"
+    },
+    {
+      "s_name": "Uncoordination",
+      "symptom_id": "C0242143"
+    },
+    {
+      "s_name": "Absences Finding",
+      "symptom_id": "C0424530"
+    },
+    {
+      "s_name": "Tonic Seizures",
+      "symptom_id": "C0270844"
+    },
+    {
+      "s_name": "Debilitation",
+      "symptom_id": "C0742985"
+    },
+    {
+      "s_name": "Impaired Cognition",
+      "symptom_id": "C0338656"
+    },
+    {
+      "s_name": "Drool",
+      "symptom_id": "C0013132"
+    },
+    {
+      "s_name": "Pin-Point Pupils",
+      "symptom_id": "C0235231"
+    },
+    {
+      "s_name": "Tremor Resting",
+      "symptom_id": "C0234379"
+    },
+    {
+      "s_name": "Groggy",
+      "symptom_id": "C0541992"
+    },
+    {
+      "s_name": "Adverse Reaction",
+      "symptom_id": "C0559546"
+    },
+    {
+      "s_name": "Adverse Effect",
+      "symptom_id": "C0879626"
+    },
+    {
+      "s_name": "Abdominal Bloating",
+      "symptom_id": "C1291077"
+    },
+    {
+      "s_name": "Fatigability",
+      "symptom_id": "C0231230"
+    },
+    {
+      "s_name": "Para 2",
+      "symptom_id": "C0233071"
+    },
+    {
+      "s_name": "Abortion",
+      "symptom_id": "C0156543"
+    },
+    {
+      "s_name": "Intermenstrual Heavy Bleeding",
+      "symptom_id": "C0232943"
+    },
+    {
+      "s_name": "Previous Pregnancies 2",
+      "symptom_id": "C0232997"
+    },
+    {
+      "s_name": "Primigravida",
+      "symptom_id": "C0860096"
+    },
+    {
+      "s_name": "Abnormally Hard Consistency",
+      "symptom_id": "C0702118"
+    },
+    {
+      "s_name": "Proteinemia",
+      "symptom_id": "C1405524"
+    },
+    {
+      "s_name": "Pain Neck",
+      "symptom_id": "C0007859"
+    },
+    {
+      "s_name": "Dizzy Spells",
+      "symptom_id": "C0857087"
+    },
+    {
+      "s_name": "Shooting Pain",
+      "symptom_id": "C0278146"
+    },
+    {
+      "s_name": "Hyperemesis",
+      "symptom_id": "C0235250"
+    },
+    {
+      "s_name": "Milky",
+      "symptom_id": "C0443260"
+    },
+    {
+      "s_name": "Regurgitates After Swallowing",
+      "symptom_id": "C0232605"
+    },
+    {
+      "s_name": "Lip Smacking",
+      "symptom_id": "C0542073"
+    },
+    {
+      "s_name": "Phonophobia",
+      "symptom_id": "C0751466"
+    },
+    {
+      "s_name": "Rolling Of Eyes",
+      "symptom_id": "C0522336"
+    },
+    {
+      "s_name": "Ambidexterity",
+      "symptom_id": "C0002416"
+    },
+    {
+      "s_name": "Pulsusparadoxus",
+      "symptom_id": "C0232118"
+    },
+    {
+      "s_name": "Gravida 10",
+      "symptom_id": "C1291692"
+    },
+    {
+      "s_name": "Bruit",
+      "symptom_id": "C0006318"
+    },
+    {
+      "s_name": "Breath-Holding Spell",
+      "symptom_id": "C0476287"
+    },
+    {
+      "s_name": "Scleralicterus",
+      "symptom_id": "C0240962"
+    },
+    {
+      "s_name": "Retch",
+      "symptom_id": "C0232602"
+    },
+    {
+      "s_name": "Blanch",
+      "symptom_id": "C0948786"
+    },
+    {
+      "s_name": "Elation",
+      "symptom_id": "C0233492"
+    },
+    {
+      "s_name": "Verbally Abusive Behavior",
+      "symptom_id": "C0558089"
+    },
+    {
+      "s_name": "Transsexual",
+      "symptom_id": "C0558141"
+    },
+    {
+      "s_name": "Behavior Showing Increased Motor Activity",
+      "symptom_id": "C0474395"
+    },
+    {
+      "s_name": "Coordination Abnormal",
+      "symptom_id": "C0520966"
+    },
+    {
+      "s_name": "Choke",
+      "symptom_id": "C0008301"
+    },
+    {
+      "s_name": "Bowel Sounds Decreased",
+      "symptom_id": "C0232695"
+    },
+    {
+      "s_name": "No Known Drug Allergies",
+      "symptom_id": "C0262581"
+    },
+    {
+      "s_name": "Low Back Pain",
+      "symptom_id": "C0024031"
+    },
+    {
+      "s_name": "Charleyhorse",
+      "symptom_id": "C0277823"
+    },
+    {
+      "s_name": "Sedentary",
+      "symptom_id": "C0205254"
+    },
+    {
+      "s_name": "Feels Hot/Feverish",
+      "symptom_id": "C0424749"
+    },
+    {
+      "s_name": "Flare",
+      "symptom_id": "C1517205"
+    },
+    {
+      "s_name": "Pericardial Friction Rub",
+      "symptom_id": "C0232267"
+    },
+    {
+      "s_name": "Hoard",
+      "symptom_id": "C0424337"
+    },
+    {
+      "s_name": "Panic",
+      "symptom_id": "C0030318"
+    },
+    {
+      "s_name": "Cardiovascular Finding",
+      "symptom_id": "C0425560"
+    },
+    {
+      "s_name": "Cardiovascular Event",
+      "symptom_id": "C1320716"
+    },
+    {
+      "s_name": "Soft Tissue Swelling",
+      "symptom_id": "C0037580"
+    },
+    {
+      "s_name": "Rhd Positive",
+      "symptom_id": "C0427629"
+    },
+    {
+      "s_name": "Para 1",
+      "symptom_id": "C0233070"
+    },
+    {
+      "s_name": "Nasal Flaring",
+      "symptom_id": "C0277873"
+    },
+    {
+      "s_name": "Sneeze",
+      "symptom_id": "C0037383"
+    },
+    {
+      "s_name": "Hypertonicity",
+      "symptom_id": "C0235396"
+    },
+    {
+      "s_name": "Murphy'S Sign",
+      "symptom_id": "C0277977"
+    },
+    {
+      "s_name": "Flatulence",
+      "symptom_id": "C0016204"
+    },
+    {
+      "s_name": "Gasping For Breath",
+      "symptom_id": "C0425449"
+    },
+    {
+      "s_name": "Feces In Rectum",
+      "symptom_id": "C0474505"
+    },
+    {
+      "s_name": "Prodrome",
+      "symptom_id": "C0240805"
+    },
+    {
+      "s_name": "Hypoproteinemia",
+      "symptom_id": "C0020639"
+    },
+    {
+      "s_name": "Alcohol Binge Episode",
+      "symptom_id": "C0556346"
+    },
+    {
+      "s_name": "Abdomen Acute",
+      "symptom_id": "C0000727"
+    },
+    {
+      "s_name": "Air Fluid Level",
+      "symptom_id": "C0740844"
+    },
+    {
+      "s_name": "Catching Breath",
+      "symptom_id": "C0425491"
+    },
+    {
+      "s_name": "Large-For-Dates Fetus",
+      "symptom_id": "C0456091"
+    },
+    {
+      "s_name": "Immobile",
+      "symptom_id": "C0231441"
+    },
+    {
+      "s_name": "Homicidal Thoughts",
+      "symptom_id": "C0455204"
+    }
+  ]
+}

@@ -83,7 +83,7 @@ function populateRelatedSymptoms(matches) {
         });
     });
 }
-
+//===============================================================================
 // Function to add a symptom to the selected list
 function addSelectedSymptom(symptomName) {
     // Check if the symptom is not already in the selectedSymptom_ids array
@@ -136,7 +136,7 @@ function updateSelectedSymptom_idsUI() {
         });
     });
 }
-
+//==================================================================================================
 // Function to handle the "Analyze" button click
 async function analyzeSymptoms() {
     // Get the HTML element for the "Analyze" button

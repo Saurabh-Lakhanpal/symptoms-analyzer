@@ -1,91 +1,670 @@
 // diseases.json
 {
-    "diseases": [
-      {
-        "disease_id": "C0020676",
-        "d_name": "Hypothyroidism",
-        "description": "A condition in which the thyroid gland doesn't produce enough thyroid hormones, leading to fatigue, weight gain, and sluggish metabolism."
-      },
-      {
-        "disease_id": "C0020538",
-        "d_name": "Hypertensive Disease",
-        "description": "A condition characterized by persistently high blood pressure, which can lead to complications such as heart disease and stroke."
-      },
-      {
-        "disease_id": "C0011847",
-        "d_name": "Diabetes",
-        "description": "A metabolic disorder resulting in high blood sugar levels due to inadequate insulin production or utilization."
-      },
-      {
-        "disease_id": "C0011570",
-        "d_name": "Depression",
-        "description": "A mental health disorder characterized by persistent feelings of sadness, loss of interest, and emotional distress."
-      },
-      {
-        "disease_id": "C0010054",
-        "d_name": "Coronary Arteriosclerosis",
-        "description": "A condition where the arteries supplying blood to the heart become hardened and narrowed due to plaque buildup."
-      },
-      {
-        "disease_id": "C0032285",
-        "d_name": "Pneumonia",
-        "description": "An infection that inflames the air sacs in the lungs, causing symptoms like fever, cough, and difficulty breathing."
-      },
-      {
-        "disease_id": "C0018802",
-        "d_name": "Congestive Heart Failure",
-        "description": "A condition where the heart is unable to pump blood efficiently, leading to fluid buildup in the lungs and extremities."
-      },
-      {
-        "disease_id": "C0038454",
-        "d_name": "Cerebrovascular Accident (Stroke)",
-        "description": "A medical emergency caused by reduced or blocked blood flow to the brain, resulting in possible paralysis or speech impairment."
-      },
-      {
-        "disease_id": "C0004096",
-        "d_name": "Asthma",
-        "description": "A chronic respiratory condition characterized by airway inflammation, causing wheezing, coughing, and difficulty breathing."
-      },
-      {
-        "disease_id": "C0027051",
-        "d_name": "Myocardial Infarction (Heart Attack)",
-        "description": "A condition caused by blockage of blood flow to the heart muscle, leading to chest pain and possible cardiac arrest."
-      },
-      {
-        "disease_id": "C0020443",
-        "d_name": "Hypercholesterolemia",
-        "description": "A condition characterized by elevated cholesterol levels, increasing the risk of cardiovascular diseases."
-      },
-      {
-        "disease_id": "C0021311",
-        "d_name": "Infection",
-        "description": "A condition caused by the invasion of harmful microorganisms, leading to symptoms like fever, inflammation, and weakness."
-      },
-      {
-        "disease_id": "C0042029",
-        "d_name": "Urinary Tract Infection",
-        "description": "An infection affecting the urinary system, causing symptoms such as pain during urination and frequent urination."
-      },
-      {
-        "disease_id": "C0002871",
-        "d_name": "Anemia",
-        "description": "A condition in which there is a deficiency of red blood cells or hemoglobin, leading to fatigue and weakness."
-      },
-      {
-        "disease_id": "C0024117",
-        "d_name": "Chronic Obstructive Pulmonary Disease (COPD)",
-        "description": "A chronic lung condition characterized by obstructed airflow, leading to breathing difficulties."
-      },
-      {
-        "disease_id": "C0497327",
-        "d_name": "Dementia",
-        "description": "A decline in cognitive function affecting memory, reasoning, and communication."
-      },
-      {
-        "disease_id": "C1565489",
-        "d_name": "Renal Insufficiency",
-        "description": "A condition where the kidneys fail to adequately filter waste from the blood, leading to fluid and electrolyte imbalances."
-      }
-    ]
-  }
-  
+  "diseases": [
+    {
+      "d_name": "Hypertensive Disease",
+      "description": "Chronic High Blood Pressure Increases Risk Of Heart Disease, Stroke, And Kidney Damage.",
+      "disease_id": "C0020538"
+    },
+    {
+      "d_name": "Diabetes",
+      "description": "A Metabolic Disorder Causing Elevated Blood Sugar Levels Due To Insulin Issues.",
+      "disease_id": "C0011847"
+    },
+    {
+      "d_name": "Depression Mental",
+      "description": "A Condition Marked By Persistent Sadness, Low Energy, And Loss Of Interest.",
+      "disease_id": "C0011570"
+    },
+    {
+      "d_name": "Coronary Arteriosclerosis",
+      "description": "Hardening Of Coronary Arteries Reduces Blood Flow To The Heart.",
+      "disease_id": "C0010054"
+    },
+    {
+      "d_name": "Pneumonia",
+      "description": "A Lung Infection That Causes Cough, Fever, And Difficulty Breathing.",
+      "disease_id": "C0032285"
+    },
+    {
+      "d_name": "Failure Heart Congestive",
+      "description": "The Heart'S Reduced Ability To Pump Blood Effectively Causes Fluid Buildup.",
+      "disease_id": "C0018802"
+    },
+    {
+      "d_name": "Accidentcerebrovascular",
+      "description": "A Stroke Occurs When Blood Flow To The Brain Is Reduced Or Blocked.",
+      "disease_id": "C0038454"
+    },
+    {
+      "d_name": "Asthma",
+      "description": "A Chronic Respiratory Condition Causing Airway Inflammation And Breathing Difficulty.",
+      "disease_id": "C0004096"
+    },
+    {
+      "d_name": "Myocardial Infarction",
+      "description": "A Heart Attack Due To Blocked Blood Flow To Heart Muscles.",
+      "disease_id": "C0027051"
+    },
+    {
+      "d_name": "Hypercholesterolemia",
+      "description": "Elevated Blood Cholesterol Raises Risk Of Heart Disease.",
+      "disease_id": "C0020443"
+    },
+    {
+      "d_name": "Infection",
+      "description": "Invasion By Harmful Microorganisms Causing Illness Or Inflammation.",
+      "disease_id": "C0021311"
+    },
+    {
+      "d_name": "Infection Urinary Tract",
+      "description": "A Bacterial Infection Of The Urinary System Causing Discomfort.",
+      "disease_id": "C0042029"
+    },
+    {
+      "d_name": "Anemia",
+      "description": "A Condition Where Low Red Blood Cells Reduce Oxygen Delivery To Tissues.",
+      "disease_id": "C0002871"
+    },
+    {
+      "d_name": "Chronic Obstructive Airway Disease",
+      "description": "A Group Of Lung Diseases Causing Airflow Blockage And Breathing Issues.",
+      "disease_id": "C0024117"
+    },
+    {
+      "d_name": "Dementia",
+      "description": "A Decline In Memory, Thinking, And Daily Functioning Due To Brain Damage.",
+      "disease_id": "C0497327"
+    },
+    {
+      "d_name": "Insufficiency Renal",
+      "description": "The Kidneys Fail To Filter Waste Efficiently, Leading To Toxic Buildup.",
+      "disease_id": "C1565489"
+    },
+    {
+      "d_name": "Confusion",
+      "description": "A State Of Disorientation Affecting Memory Or Focus.",
+      "disease_id": "C0009676"
+    },
+    {
+      "d_name": "Degenerativepolyarthritis",
+      "description": "A Chronic Joint Condition Causing Pain And Inflammation.",
+      "disease_id": "C0029408"
+    },
+    {
+      "d_name": "Hypothyroidism",
+      "description": "The Thyroid Produces Insufficient Hormones, Slowing Metabolism.",
+      "disease_id": "C0020676"
+    },
+    {
+      "d_name": "Anxiety State",
+      "description": "A Mental Health Condition Marked By Excessive Worry Or Fear.",
+      "disease_id": "C0700613"
+    },
+    {
+      "d_name": "Malignant Neoplasms",
+      "description": "Cancerous Tumors Capable Of Invading Tissues And Spreading.",
+      "disease_id": "C0006826"
+    },
+    {
+      "d_name": "Acquiredimmuno-Deficiency Syndrome",
+      "description": "A Chronic Immune Condition Caused By Hiv.",
+      "disease_id": "C0001175"
+    },
+    {
+      "d_name": "Cellulitis",
+      "description": "A Bacterial Skin Infection Causing Redness, Swelling, And Pain.",
+      "disease_id": "C0007642"
+    },
+    {
+      "d_name": "Gastroesophageal Reflux Disease",
+      "description": "Acid Reflux Irritates The Esophagus, Causing Discomfort.",
+      "disease_id": "C0017168"
+    },
+    {
+      "d_name": "Septicemia",
+      "description": "A Severe Infection Spreading Through The Bloodstream.",
+      "disease_id": "C0036690"
+    },
+    {
+      "d_name": "Deep Vein Thrombosis",
+      "description": "A Condition Where Blood Clots Form In Deep Veins, Often In The Legs, Causing Pain And Swelling.",
+      "disease_id": "C0149871"
+    },
+    {
+      "d_name": "Dehydration",
+      "description": "Excessive Loss Of Body Fluids Leading To Impaired Physical Functions.",
+      "disease_id": "C0011175"
+    },
+    {
+      "d_name": "Neoplasm",
+      "description": "An Abnormal Growth Of Tissue, Which May Be Benign Or Malignant.",
+      "disease_id": "C0027651"
+    },
+    {
+      "d_name": "Embolism Pulmonary",
+      "description": "A Blockage In The Lungs' Arteries, Often Caused By Blood Clots.",
+      "disease_id": "C0034065"
+    },
+    {
+      "d_name": "Epilepsy",
+      "description": "A Neurological Disorder Marked By Recurrent Seizures Due To Abnormal Brain Activity.",
+      "disease_id": "C0014544"
+    },
+    {
+      "d_name": "Cardiomyopathy",
+      "description": "Disease Of The Heart Muscle, Reducing Its Ability To Pump Blood Effectively.",
+      "disease_id": "C0878544"
+    },
+    {
+      "d_name": "Chronic Kidney Failure",
+      "description": "Gradual Loss Of Kidney Function Leading To The Buildup Of Waste In The Body.",
+      "disease_id": "C0022661"
+    },
+    {
+      "d_name": "Carcinoma",
+      "description": "A Type Of Cancer Originating In The Skin Or Tissues Lining Internal Organs.",
+      "disease_id": "C0007097"
+    },
+    {
+      "d_name": "Hepatitis C",
+      "description": "A Liver Infection Caused By The Hepatitis C Virus, Potentially Leading To Liver Damage.",
+      "disease_id": "C0019196"
+    },
+    {
+      "d_name": "Peripheral Vascular Disease",
+      "description": "Poor Circulation To The Limbs Caused By Narrowed Or Blocked Blood Vessels.",
+      "disease_id": "C0085096"
+    },
+    {
+      "d_name": "Psychotic Disorder",
+      "description": "A Mental Health Condition Causing Distorted Thinking, Perceptions, And Disconnection From Reality.",
+      "disease_id": "C0033975"
+    },
+    {
+      "d_name": "Hyperlipidemia",
+      "description": "High Levels Of Fats, Like Cholesterol, In The Blood, Increasing Heart Disease Risks.",
+      "disease_id": "C0020473"
+    },
+    {
+      "d_name": "Bipolar Disorder",
+      "description": "A Mental Illness Causing Extreme Mood Swings Between Manic Highs And Depressive Lows.",
+      "disease_id": "C0005586"
+    },
+    {
+      "d_name": "Obesity",
+      "description": "Excessive Body Fat Increasing Risks Of Various Health Conditions.",
+      "disease_id": "C0028754"
+    },
+    {
+      "d_name": "Ischemia",
+      "description": "Reduced Blood Flow To Tissues, Causing Oxygen Deprivation And Potential Damage.",
+      "disease_id": "C0022116"
+    },
+    {
+      "d_name": "Cirrhosis",
+      "description": "Chronic Liver Disease Characterized By Scarring And Impaired Liver Function.",
+      "disease_id": "C1623038"
+    },
+    {
+      "d_name": "Exanthema",
+      "description": "A Widespread Skin Rash Often Caused By Infections Or Allergic Reactions.",
+      "disease_id": "C0015230"
+    },
+    {
+      "d_name": "Benign Prostatic Hypertrophy",
+      "description": "Non-Cancerous Enlargement Of The Prostate Gland, Often Causing Urinary Issues.",
+      "disease_id": "C0005001"
+    },
+    {
+      "d_name": "Kidney Failure Acute",
+      "description": "Sudden Loss Of Kidney Function, Leading To Waste Buildup And Life-Threatening Complications.",
+      "disease_id": "C0022660"
+    },
+    {
+      "d_name": "Mitral Valve Insufficiency",
+      "description": "A Condition Where The Mitral Valve Does Not Close Properly, Allowing Blood To Flow Backward In The Heart.",
+      "disease_id": "C0026266"
+    },
+    {
+      "d_name": "Arthritis",
+      "description": "Inflammation Of Joints Causing Pain, Swelling, And Stiffness.",
+      "disease_id": "C0003864"
+    },
+    {
+      "d_name": "Bronchitis",
+      "description": "Inflammation Of The Bronchial Tubes, Causing Coughing And Mucus Production.",
+      "disease_id": "C0006277"
+    },
+    {
+      "d_name": "Hemiparesis",
+      "description": "Partial Paralysis Or Weakness On One Side Of The Body, Often Due To Stroke.",
+      "disease_id": "C0018989"
+    },
+    {
+      "d_name": "Osteoporosis",
+      "description": "A Condition That Weakens Bones, Making Them Prone To Fractures.",
+      "disease_id": "C0029456"
+    },
+    {
+      "d_name": "Transient Ischemic Attack",
+      "description": "A Mini-Stroke With Temporary Reduced Blood Flow To The Brain.",
+      "disease_id": "C0007787"
+    },
+    {
+      "d_name": "Adenocarcinoma",
+      "description": "A Cancer That Begins In Glandular Tissues, Often Affecting Organs Like Lungs Or Colon.",
+      "disease_id": "C0001418"
+    },
+    {
+      "d_name": "Paranoia",
+      "description": "An Irrational Feeling Of Distrust Or Suspicion Toward Others.",
+      "disease_id": "C1456784"
+    },
+    {
+      "d_name": "Pancreatitis",
+      "description": "Inflammation Of The Pancreas Causing Severe Abdominal Pain And Digestive Problems.",
+      "disease_id": "C0030305"
+    },
+    {
+      "d_name": "Incontinence",
+      "description": "Loss Of Bladder Or Bowel Control, Leading To Unintentional Leakage.",
+      "disease_id": "C0021167"
+    },
+    {
+      "d_name": "Paroxysmaldyspnea",
+      "description": "Sudden Episodes Of Difficulty Breathing, Often Associated With Heart Or Lung Conditions.",
+      "disease_id": "C0013405"
+    },
+    {
+      "d_name": "Hernia",
+      "description": "When An Internal Organ Pushes Through A Weak Spot In The Muscle Or Tissue Wall.",
+      "disease_id": "C0019270"
+    },
+    {
+      "d_name": "Malignant Neoplasm Of Prostate",
+      "description": "A Cancerous Growth In The Prostate Gland, Potentially Spreading To Other Areas.",
+      "disease_id": "C0376358"
+    },
+    {
+      "d_name": "Edema Pulmonary",
+      "description": "Fluid Buildup In The Lungs, Causing Difficulty Breathing And Reduced Oxygen Exchange.",
+      "disease_id": "C0034063"
+    },
+    {
+      "d_name": "Lymphatic Diseases",
+      "description": "Disorders Affecting The Lymphatic System, Such As Lymphedema Or Lymphoma.",
+      "disease_id": "C0024228"
+    },
+    {
+      "d_name": "Stenosis Aortic Valve",
+      "description": "Narrowing Of The Aortic Valve, Restricting Blood Flow From The Heart.",
+      "disease_id": "C0003507"
+    },
+    {
+      "d_name": "Malignant Neoplasm Of Breast",
+      "description": "Cancer Originating In The Breast Tissue, Often Forming A Tumor.",
+      "disease_id": "C0006142"
+    },
+    {
+      "d_name": "Schizophrenia",
+      "description": "A Mental Disorder Causing Delusions, Hallucinations, And Impaired Thought Processes.",
+      "disease_id": "C0036341"
+    },
+    {
+      "d_name": "Diverticulitis",
+      "description": "Inflammation Or Infection Of Small Pouches In The Digestive Tract, Causing Pain.",
+      "disease_id": "C0012813"
+    },
+    {
+      "d_name": "Overload Fluid",
+      "description": "Excess Fluid In The Body Leading To Swelling, Weight Gain, Or Breathing Issues.",
+      "disease_id": "C0546817"
+    },
+    {
+      "d_name": "Ulcer Peptic",
+      "description": "Open Sores In The Stomach Lining Or Small Intestine, Causing Pain And Nausea.",
+      "disease_id": "C0030920"
+    },
+    {
+      "d_name": "Osteomyelitis",
+      "description": "Bone Infection Usually Caused By Bacteria, Leading To Swelling And Pain.",
+      "disease_id": "C0029443"
+    },
+    {
+      "d_name": "Gastritis",
+      "description": "Inflammation Of The Stomach Lining, Often Causing Nausea And Abdominal Discomfort.",
+      "disease_id": "C0017152"
+    },
+    {
+      "d_name": "Bacteremia",
+      "description": "Presence Of Bacteria In The Bloodstream, Potentially Causing Severe Infections.",
+      "disease_id": "C0004610"
+    },
+    {
+      "d_name": "Failure Kidney",
+      "description": "Loss Of Kidney Function Leading To Toxic Waste Buildup In The Blood.",
+      "disease_id": "C0035078"
+    },
+    {
+      "d_name": "Sickle Cell Anemia",
+      "description": "A Genetic Blood Disorder Causing Abnormally Shaped Red Blood Cells, Leading To Pain And Fatigue.",
+      "disease_id": "C0002895"
+    },
+    {
+      "d_name": "Failure Heart",
+      "description": "Inability Of The Heart To Pump Blood Effectively, Causing Fatigue And Fluid Buildup.",
+      "disease_id": "C0018801"
+    },
+    {
+      "d_name": "Upper Respiratory Infection",
+      "description": "Infection Affecting The Nose, Throat, Or Sinuses, Causing Congestion Or Cough.",
+      "disease_id": "C0041912"
+    },
+    {
+      "d_name": "Hepatitis",
+      "description": "Inflammation Of The Liver, Often Caused By Viral Infection Or Alcohol Abuse.",
+      "disease_id": "C0019158"
+    },
+    {
+      "d_name": "Hypertension Pulmonary",
+      "description": "High Blood Pressure In The Arteries Of The Lungs, Causing Strain On The Heart.",
+      "disease_id": "C0020542"
+    },
+    {
+      "d_name": "Deglutition Disorder",
+      "description": "Difficulty Swallowing Due To Nerve Or Muscle Problems.",
+      "disease_id": "C0011168"
+    },
+    {
+      "d_name": "Gout",
+      "description": "A Type Of Arthritis Caused By Uric Acid Buildup, Leading To Joint Pain And Swelling.",
+      "disease_id": "C0018099"
+    },
+    {
+      "d_name": "Thrombocytopaenia",
+      "description": "A Condition With Abnormally Low Platelet Levels, Causing Bleeding And Bruising.",
+      "disease_id": "C0040034"
+    },
+    {
+      "d_name": "Hypoglycemia",
+      "description": "Low Blood Sugar Levels Causing Shakiness, Confusion, Or Fainting.",
+      "disease_id": "C0020615"
+    },
+    {
+      "d_name": "Pneumonia Aspiration",
+      "description": "Lung Infection Caused By Inhalation Of Food, Liquid, Or Other Material.",
+      "disease_id": "C0032290"
+    },
+    {
+      "d_name": "Colitis",
+      "description": "Inflammation Of The Colon Causing Abdominal Pain, Diarrhea, Or Bleeding.",
+      "disease_id": "C0009319"
+    },
+    {
+      "d_name": "Diverticulosis",
+      "description": "Formation Of Small Pouches In The Colon, Which May Lead To Diverticulitis.",
+      "disease_id": "C1510475"
+    },
+    {
+      "d_name": "Suicide Attempt",
+      "description": "A Deliberate Act Of Self-Harm With The Intention Of Ending One'S Life.",
+      "disease_id": "C0038663"
+    },
+    {
+      "d_name": "Pneumocystiscariniipneumonia",
+      "description": "A Severe Lung Infection Often Affecting People With Weakened Immune Systems.",
+      "disease_id": "C0032305"
+    },
+    {
+      "d_name": "Hepatitis B",
+      "description": "A Liver Infection Caused By The Hepatitis B Virus, Potentially Leading To Liver Damage.",
+      "disease_id": "C0019163"
+    },
+    {
+      "d_name": "Parkinson Disease",
+      "description": "A Progressive Neurological Disorder Affecting Movement And Causing Tremors.",
+      "disease_id": "C0030567"
+    },
+    {
+      "d_name": "Lymphoma",
+      "description": "A Type Of Cancer Affecting The Lymphatic System, Including Lymph Nodes And Spleen.",
+      "disease_id": "C0024299"
+    },
+    {
+      "d_name": "Hyperglycemia",
+      "description": "High Blood Sugar Levels That May Cause Dehydration, Fatigue, Or Complications.",
+      "disease_id": "C0020456"
+    },
+    {
+      "d_name": "Encephalopathy",
+      "description": "Brain Dysfunction Caused By Infections, Toxins, Or Other Conditions.",
+      "disease_id": "C0085584"
+    },
+    {
+      "d_name": "Tricuspid Valve Insufficiency",
+      "description": "A Condition Where The Tricuspid Valve In The Heart Doesn\u2019T Close Properly, Allowing Blood Leakage.",
+      "disease_id": "C0040961"
+    },
+    {
+      "d_name": "Alzheimer'S Disease",
+      "description": "A Progressive Brain Disorder Causing Memory Loss, Confusion, And Cognitive Decline.",
+      "disease_id": "C0002395"
+    },
+    {
+      "d_name": "Candidiasis",
+      "description": "A Fungal Infection Often Affecting The Mouth, Skin, Or Genitals.",
+      "disease_id": "C0006840"
+    },
+    {
+      "d_name": "Neuropathy",
+      "description": "Damage To Peripheral Nerves Causing Weakness, Numbness, Or Pain.",
+      "disease_id": "C0442874"
+    },
+    {
+      "d_name": "Kidney Disease",
+      "description": "A Chronic Condition Affecting Kidney Function And Waste Filtration.",
+      "disease_id": "C0022658"
+    },
+    {
+      "d_name": "Fibroid Tumor",
+      "description": "Non-Cancerous Growths In The Uterus, Often Causing Pain Or Bleeding.",
+      "disease_id": "C0023267"
+    },
+    {
+      "d_name": "Glaucoma",
+      "description": "Eye Condition Causing Optic Nerve Damage And Potential Vision Loss.",
+      "disease_id": "C0017601"
+    },
+    {
+      "d_name": "Neoplasm Metastasis",
+      "description": "Spread Of Abnormal Tissue Growth (Cancer) From Its Original Site To Other Parts Of The Body.",
+      "disease_id": "C0027627"
+    },
+    {
+      "d_name": "Malignant Tumor Of Colon",
+      "description": "A Cancerous Growth In The Colon, Often Leading To Abdominal Discomfort Or Blood In Stool.",
+      "disease_id": "C0007102"
+    },
+    {
+      "d_name": "Ketoacidosis Diabetic",
+      "description": "A Serious Complication Of Diabetes Caused By High Blood Sugar And Ketone Buildup.",
+      "disease_id": "C0011880"
+    },
+    {
+      "d_name": "Tonic-Clonic Epilepsy",
+      "description": "A Seizure Disorder With Phases Of Muscle Stiffness Followed By Jerking Movements.",
+      "disease_id": "C0014549"
+    },
+    {
+      "d_name": "Respiratory Failure",
+      "description": "Condition Where The Lungs Fail To Provide Enough Oxygen Or Remove Carbon Dioxide.",
+      "disease_id": "C1145670"
+    },
+    {
+      "d_name": "Melanoma",
+      "description": "A Type Of Skin Cancer That Develops In Pigment-Producing Cells, Often Triggered By Sun Exposure.",
+      "disease_id": "C0025202"
+    },
+    {
+      "d_name": "Gastroenteritis",
+      "description": "Inflammation Of The Stomach And Intestines Causing Diarrhea, Vomiting, And Abdominal Pain.",
+      "disease_id": "C0017160"
+    },
+    {
+      "d_name": "Malignant Neoplasm Of Lung",
+      "description": "A Cancerous Growth In The Lungs, Often Linked To Smoking Or Pollution.",
+      "disease_id": "C0242379"
+    },
+    {
+      "d_name": "Manic Disorder",
+      "description": "A Mental Health Condition With Periods Of Elevated Mood, Energy, And Unusual Behavior.",
+      "disease_id": "C0024713"
+    },
+    {
+      "d_name": "Personality Disorder",
+      "description": "Long-Term Mental Health Conditions Affecting Behavior, Mood, And Relationships.",
+      "disease_id": "C0031212"
+    },
+    {
+      "d_name": "Primary Carcinoma Of The Liver Cells",
+      "description": "A Cancer Originating In The Liver Cells, Often Linked To Hepatitis Or Cirrhosis.",
+      "disease_id": "C0019204"
+    },
+    {
+      "d_name": "Emphysema Pulmonary",
+      "description": "A Lung Condition Causing Difficulty Breathing Due To Damaged Alveoli.",
+      "disease_id": "C0034067"
+    },
+    {
+      "d_name": "Hemorrhoids",
+      "description": "Swollen Veins In The Rectum Or Anus Causing Pain, Itching, Or Bleeding.",
+      "disease_id": "C0019112"
+    },
+    {
+      "d_name": "Spasm Bronchial",
+      "description": "Sudden Tightening Of Airway Muscles, Leading To Difficulty Breathing.",
+      "disease_id": "C0006266"
+    },
+    {
+      "d_name": "Aphasia",
+      "description": "A Condition Impairing The Ability To Speak, Write, Or Understand Language, Often Due To Brain Injury.",
+      "disease_id": "C0003537"
+    },
+    {
+      "d_name": "Obesity Morbid",
+      "description": "Extreme Obesity Severely Affecting Health, Mobility, And Quality Of Life.",
+      "disease_id": "C0028756"
+    },
+    {
+      "d_name": "Pyelonephritis",
+      "description": "A Bacterial Infection Of The Kidneys Causing Fever, Back Pain, And Frequent Urination.",
+      "disease_id": "C0034186"
+    },
+    {
+      "d_name": "Endocarditis",
+      "description": "Inflammation Of The Heart'S Inner Lining, Usually Caused By Infection.",
+      "disease_id": "C0014118"
+    },
+    {
+      "d_name": "Effusion Pericardial",
+      "description": "Fluid Buildup Around The Heart, Restricting Its Function And Causing Chest Pain.",
+      "disease_id": "C0031039"
+    },
+    {
+      "d_name": "Chronic Alcoholic Intoxication",
+      "description": "Prolonged Excessive Alcohol Consumption Causing Physical And Mental Health Problems.",
+      "disease_id": "C0001973"
+    },
+    {
+      "d_name": "Pneumothorax",
+      "description": "A Collapsed Lung Due To Air Leaking Into The Space Between The Lung And Chest Wall.",
+      "disease_id": "C0032326"
+    },
+    {
+      "d_name": "Delirium",
+      "description": "Sudden Confusion Or Altered Awareness Often Caused By Illness, Medications, Or Substance Use.",
+      "disease_id": "C0011206"
+    },
+    {
+      "d_name": "Neutropenia",
+      "description": "An Abnormally Low Level Of Neutrophils, Increasing Susceptibility To Infections.",
+      "disease_id": "C0027947"
+    },
+    {
+      "d_name": "Hyperbilirubinemia",
+      "description": "Excess Bilirubin In The Blood Causing Yellowing Of The Skin And Eyes (Jaundice).",
+      "disease_id": "C0020433"
+    },
+    {
+      "d_name": "Influenza",
+      "description": "A Contagious Respiratory Illness Caused By Influenza Viruses, Leading To Fever, Aches, And Fatigue.",
+      "disease_id": "C0021400"
+    },
+    {
+      "d_name": "Dependence",
+      "description": "A Condition Where The Body Or Mind Requires A Substance To Function, Often Leading To Withdrawal Symptoms.",
+      "disease_id": "C0439857"
+    },
+    {
+      "d_name": "Thrombus",
+      "description": "A Blood Clot That Can Block Circulation, Potentially Causing Complications Like Strokes.",
+      "disease_id": "C0087086"
+    },
+    {
+      "d_name": "Cholecystitis",
+      "description": "Inflammation Of The Gallbladder, Often Due To Gallstones, Causing Pain And Fever.",
+      "disease_id": "C0008325"
+    },
+    {
+      "d_name": "Herniahiatal",
+      "description": "A Condition Where Part Of The Stomach Pushes Up Into The Chest Through The Diaphragm.",
+      "disease_id": "C0019291"
+    },
+    {
+      "d_name": "Migraine Disorders",
+      "description": "A Neurological Condition Causing Severe Headaches, Often With Nausea And Light Sensitivity.",
+      "disease_id": "C0149931"
+    },
+    {
+      "d_name": "Pancytopenia",
+      "description": "A Condition With Reduced Levels Of All Blood Cells, Often Caused By Bone Marrow Disorders.",
+      "disease_id": "C0030312"
+    },
+    {
+      "d_name": "Cholelithiasis",
+      "description": "Formation Of Gallstones, Causing Pain And Digestive Issues.",
+      "disease_id": "C0008350"
+    },
+    {
+      "d_name": "Tachycardia Sinus",
+      "description": "Increased Heart Rate Originating From The Heart\u2019S Natural Pacemaker.",
+      "disease_id": "C0039239"
+    },
+    {
+      "d_name": "Ileus",
+      "description": "Disruption Of The Normal Movement Of The Intestines, Causing Blockage.",
+      "disease_id": "C1258215"
+    },
+    {
+      "d_name": "Adhesion",
+      "description": "Scar Tissue That Forms Between Organs Or Tissues, Sometimes Leading To Complications.",
+      "disease_id": "C0001511"
+    },
+    {
+      "d_name": "Delusion",
+      "description": "A Fixed False Belief, Often Associated With Mental Health Disorders.",
+      "disease_id": "C0011253"
+    },
+    {
+      "d_name": "Affect Labile",
+      "description": "Rapid And Intense Emotional Changes, Commonly Seen In Certain Mental Health Conditions.",
+      "disease_id": "C0233472"
+    },
+    {
+      "d_name": "Decubitus Ulcer",
+      "description": "Pressure Sores Or Bedsores Caused By Prolonged Pressure On The Skin, Often In Immobile Patients.",
+      "disease_id": "C0011127"
+    }
+  ]
+}
