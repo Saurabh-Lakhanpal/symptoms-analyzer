@@ -14,7 +14,7 @@
 - [Getting Started](#getting-started)
 - [Directory Structure](#directory-structure)
 - [Dataset](#dataset)
-- [License](#license)
+- [Requirements](#requirements)
 - [Project Team](#project-team)
 - [Project Presentation](#project-presentation)
 
@@ -116,9 +116,11 @@ symptoms-analyzer
 
 ---
 
-### License
+### Requirements
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+```
+requirements.txt
+```
 
 ---
 
@@ -130,3 +132,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 ### Project Presentation
+[Presentation Link]()

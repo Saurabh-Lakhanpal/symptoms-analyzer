@@ -1,3 +1,5 @@
+# app.py
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from sqlalchemy import create_engine, Table, MetaData
@@ -145,7 +147,6 @@ def matches():
             return jsonify({"error": "No symptoms provided", "message": "Provide symptoms as a comma-separated list in the query string"}), 400
 
         selectedSymptom_ids = selectedSymptom_ids.split(',')
-        print("Selected Symptom IDs:", selectedSymptom_ids)
 
         # Step 2: Query symptom names from the database
         symptom_names = []
@@ -153,41 +154,40 @@ def matches():
             result = session.query(Symptoms).filter_by(symptom_id=symptom_id).first()
             if result:
                 symptom_names.append(result.s_name)
-            else:
-                print(f"Symptom ID {symptom_id} not found.")
-        print("Symptom Names:", symptom_names)
 
         # Step 3: Query the database table symptom_disease_tb and create symptom_disease_df
-        input = pd.DataFrame([{symptom_id: 1 for symptom_id in selectedSymptom_ids}], columns=binary_features).fillna(0)
-        print("Test Input DataFrame:\n", input.head())
+        results = session.query(DiseaseSymptom).all()
+        symptom_disease_df = pd.DataFrame([
+            {"disease_id": row.disease_id, "symptom_id": row.symptom_id}
+            for row in results
+        ])
 
-        # Step 4: balance it, scale it, one hot code it
-        input_scaled = scaler.transform(input)
-        print("Scaled Test Input:\n", input_scaled)
+        # Step 4: Balance it, scale it, one-hot encode it
+        binary_features = pd.get_dummies(symptom_disease_df['symptom_id'])
+        disease_symptom_hotcoded = pd.concat(
+            [symptom_disease_df['disease_id'], binary_features],
+            axis=1
+        ).groupby('disease_id').sum().reset_index()
 
-        # Step 5: Predict disease probabilities from the model 
+        input_df = pd.DataFrame([{symptom_id: 1 for symptom_id in selectedSymptom_ids}], columns=binary_features.columns).fillna(0)
+        input_scaled = scaler.transform(input_df)
+
+        # Step 5: Predict disease probabilities from the model
         probabilities = model.predict(input_scaled)
-        print("Predicted Probabilities:", probabilities)
 
         # Step 6: Get top 3 indices based on predicted probabilities
         top_indices = np.argsort(probabilities[0])[-3:][::-1]
-        print("Top Indices:", top_indices)
-        print("Disease Symptom Hotcoded Shape:", disease_symptom_hotcoded.shape)
 
         # Step 7: Fetch matching diseases and their details
         matches_response = []
         for index in top_indices:
             if index >= len(disease_symptom_hotcoded):
-                print(f"Index {index} is out of bounds for disease_symptom_hotcoded.")
                 continue
 
-            # Safely access rows and disease_id
             row = disease_symptom_hotcoded.iloc[index]
             if isinstance(row, pd.DataFrame):
                 row = row.squeeze()
-            print("Accessed Row:", row)
             disease_id = row['disease_id']
-            print(f"Disease ID at index {index}: {disease_id}")
 
             # Query disease details
             disease_result = session.query(Diseases).filter_by(disease_id=disease_id).first()
@@ -196,7 +196,6 @@ def matches():
                 symptom_list = [session.query(Symptoms).filter_by(symptom_id=s.symptom_id).first().s_name for s in associated_symptoms]
                 print(f"Associated Symptoms for Disease ID {disease_id}: {symptom_list}")
 
-                # Build match entry
                 matches_response.append({
                     "d_name": disease_result.d_name,
                     "description": [disease_result.description],
@@ -216,7 +215,6 @@ def matches():
 
     # Step 9: Return successful matches response
     return jsonify({"matches": matches_response}), 200
-
 
 if __name__ == '__main__':
     app.run(debug=True)

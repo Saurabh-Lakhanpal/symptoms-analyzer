@@ -2,7 +2,7 @@
 
 // Function to fetch matching diseases based on selected symptoms
 async function fetchMatches(selectedSymptom_ids) {
-    const matchesUrl = `${window.baseUrl}/api.01/matches?symptoms=${selectedSymptom_ids.join(',')}`; 
+    const matchesUrl = `${window.baseUrl}/api.01/matches?symptom_ids=${selectedSymptom_ids.join(',')}`; 
     try {
         const response = await fetch(matchesUrl);
         if (!response.ok) {

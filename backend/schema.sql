@@ -1,3 +1,4 @@
+-- schema.sql
 -- Drop tables if they exist
 DROP TABLE IF EXISTS disease_symptom_tb;
 DROP TABLE IF EXISTS diseases_tb;

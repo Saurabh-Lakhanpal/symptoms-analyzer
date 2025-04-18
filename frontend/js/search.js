@@ -1,6 +1,6 @@
 // search.js
 
-// Global variable to store selected symptoms
+// Global variable to store selected symptoms and their IDs
 let selectedSymptoms = [];
 let selectedSymptom_ids = [];
 
@@ -47,7 +47,8 @@ function showSuggestions(suggestions) {
     suggestionBox.innerHTML = suggestions.map(suggestion => `
         <div class="suggestion-item">
             <input type="checkbox" id="${suggestion.symptom_id}" class="symptom-checkbox" 
-                   data-symptom="${suggestion.s_name}" ${selectedSymptoms.includes(suggestion.s_name) ? 'checked' : ''}>
+                   data-symptom="${suggestion.s_name}" data-symptom-id="${suggestion.symptom_id}" 
+                   ${selectedSymptoms.includes(suggestion.s_name) ? 'checked' : ''}>
             <label for="${suggestion.symptom_id}">${suggestion.s_name}</label>
         </div>
     `).join('');
@@ -56,10 +57,11 @@ function showSuggestions(suggestions) {
     suggestionBox.querySelectorAll('.symptom-checkbox').forEach(checkbox => {
         checkbox.addEventListener('change', (event) => {
             const symptomName = event.target.getAttribute('data-symptom');
+            const symptom_id = event.target.getAttribute('data-symptom-id');
             if (event.target.checked) {
-                addSelectedSymptom(symptomName);
+                addSelectedSymptom(symptomName, symptom_id);
             } else {
-                removeSelectedSymptom(symptomName);
+                removeSelectedSymptom(symptomName, symptom_id);
             }
         });
     });
@@ -74,31 +76,49 @@ function clearSuggestions() {
 }
 
 // Function to add a symptom to the selected list
-function addSelectedSymptom(symptomName) {
+function addSelectedSymptom(symptomName, symptom_id) {
     if (!selectedSymptoms.includes(symptomName)) {
-        selectedSymptoms.push(symptomName); 
-        updateSelectedSymptomsUI(); 
+        selectedSymptoms.push(symptomName);
     }
+    if (!selectedSymptom_ids.includes(symptom_id)) {
+        selectedSymptom_ids.push(symptom_id);
+    }
+
+    // Log the updated arrays
+    console.log("Added Symptom Name:", symptomName);
+    console.log("Added Symptom ID:", symptom_id);
+    console.log("Selected Symptoms Array:", selectedSymptoms);
+    console.log("Selected Symptom IDs Array:", selectedSymptom_ids);
+
+    updateSelectedSymptomsUI();
 }
 
 // Function to remove a symptom from the selected list
-function removeSelectedSymptom(symptomName) {
+function removeSelectedSymptom(symptomName, symptom_id) {
     selectedSymptoms = selectedSymptoms.filter(symptom => symptom !== symptomName);
-    updateSelectedSymptomsUI(); 
+    selectedSymptom_ids = selectedSymptom_ids.filter(id => id !== symptom_id);
+
+    // Log the updated arrays
+    console.log("Removed Symptom Name:", symptomName);
+    console.log("Removed Symptom ID:", symptom_id);
+    console.log("Selected Symptoms Array After Removal:", selectedSymptoms);
+    console.log("Selected Symptom IDs Array After Removal:", selectedSymptom_ids);
+
+    updateSelectedSymptomsUI();
 }
 
 // Function to update the "Selected Symptoms" section dynamically
 function updateSelectedSymptomsUI() {
     const selectedSymptomsDiv = document.getElementById('selected-symptoms');
-    
+
     if (selectedSymptoms.length === 0) {
         // If no symptoms are selected, show the default text
         selectedSymptomsDiv.innerHTML = "Selected Symptoms";
     } else {
         // Display the selected symptoms with "X" buttons
-        selectedSymptomsDiv.innerHTML = selectedSymptoms.map(symptom => `
+        selectedSymptomsDiv.innerHTML = selectedSymptoms.map((symptom, index) => `
             <div class="selected-symptom">
-                <button class="remove-symptom" data-symptom="${symptom}">x</button>
+                <button class="remove-symptom" data-symptom="${symptom}" data-symptom-id="${selectedSymptom_ids[index]}">x</button>
                 ${symptom}
             </div>
         `).join('');
@@ -108,7 +128,8 @@ function updateSelectedSymptomsUI() {
     document.querySelectorAll('.remove-symptom').forEach(button => {
         button.addEventListener('click', (event) => {
             const symptomToRemove = event.target.getAttribute('data-symptom');
-            removeSelectedSymptom(symptomToRemove); 
+            const symptom_idToRemove = event.target.getAttribute('data-symptom-id');
+            removeSelectedSymptom(symptomToRemove, symptom_idToRemove);
         });
     });
 }
@@ -130,8 +151,8 @@ function handleOutsideClick(event) {
     const searchBox = document.getElementById('search');
 
     if (suggestionBox && !suggestionBox.contains(event.target) && event.target !== searchBox) {
-        clearSuggestions(); 
-        searchBox.value = ""; 
+        clearSuggestions();
+        searchBox.value = "";
     }
 }
 
