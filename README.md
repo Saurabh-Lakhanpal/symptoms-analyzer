@@ -119,7 +119,19 @@ symptoms-analyzer
 ### Requirements
 
 ```
-requirements.txt
+Flask version: 3.0.3
+Flask-CORS version: 5.0.1
+SQLAlchemy version: 2.0.34
+Scikit-learn version: 1.5.1
+Pandas version: 2.2.2
+NumPy version: 1.26.4
+Pickle format version: 4.0
+python 3.12.3
+tensorflow 2.19.0
+Requests version: 2.32.3
+pgAdmin4 8.13
+psycopg2 2.9.10
+node js
 ```
 
 ---
