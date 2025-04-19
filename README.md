@@ -2,7 +2,7 @@
 
 > A Machine Learning Model for Predicting Diseases Based on Symptoms.
 
-> [Link to the Webapp]
+![webapp](https://github.com/user-attachments/assets/4b78eb60-a55a-4352-afa0-3e20a83164d4)
 
 ---
 
@@ -138,8 +138,8 @@ node js
 ---
 
 ### Project Team
-- [Evan Gowans]()
-- [Melanie Liao]()
+- [Evan Gowans](https://www.linkedin.com/in/evan-gowans/)
+- [Melanie Liao](https://www.linkedin.com/in/melanie-liao-998832165/)
 - [Saurabh Lakhanpal](https://www.linkedin.com/in/lakhanpal-saurabh/)
 
 ---
