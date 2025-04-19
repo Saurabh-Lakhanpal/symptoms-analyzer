@@ -1,6 +1,5 @@
-// search.js
-
-// Global variable to store selected symptoms and their IDs
+//search.js
+// // Global variable to store selected symptoms and their IDs
 let selectedSymptoms = [];
 let selectedSymptom_ids = [];
 
@@ -24,9 +23,6 @@ async function fetchSymptoms(searchTerm) {
             symptom.s_name.toLowerCase().includes(searchTerm.toLowerCase())
         );
 
-        // Add a console log to display the filtered results
-        console.log("Filtered Symptoms:", filteredSymptoms);
-
         return filteredSymptoms;
     } catch (error) {
         // Log any errors encountered during the API call
@@ -35,12 +31,8 @@ async function fetchSymptoms(searchTerm) {
     }
 }
 
-
 // Function to display autocomplete suggestions with checkboxes
 function showSuggestions(suggestions) {
-    // Log the incoming suggestions to debug filtering and data handling
-    console.log("Suggestions passed to showSuggestions:", suggestions);
-
     const searchBox = document.getElementById('search');
     let suggestionBox = document.getElementById('suggestions');
 
@@ -65,8 +57,6 @@ function showSuggestions(suggestions) {
 
     // Populate suggestions with checkboxes
     suggestionBox.innerHTML = suggestions.map(suggestion => {
-        // Log each suggestion before adding it to the DOM
-        console.log("Creating checkbox for suggestion:", suggestion);
 
         return `
             <div class="suggestion-item">
@@ -81,34 +71,16 @@ function showSuggestions(suggestions) {
     // Add event listeners for checkboxes
     suggestionBox.querySelectorAll('.symptom-checkbox').forEach(checkbox => {
         checkbox.addEventListener('change', (event) => {
-            // Log the checkbox being interacted with
-            console.log("Checkbox interaction:", {
-                isChecked: event.target.checked,
-                symptomName: event.target.getAttribute('data-symptom'),
-                symptomID: event.target.getAttribute('data-symptom-id')
-            });
-
             const symptomName = event.target.getAttribute('data-symptom');
             const symptom_id = event.target.getAttribute('data-symptom-id');
             if (event.target.checked) {
-                // Log before adding to the global variables
-                console.log("Adding to selectedSymptoms and selectedSymptom_ids:", {
-                    symptomName,
-                    symptom_id
-                });
                 addSelectedSymptom(symptomName, symptom_id);
             } else {
-                // Log before removing from the global variables
-                console.log("Removing from selectedSymptoms and selectedSymptom_ids:", {
-                    symptomName,
-                    symptom_id
-                });
                 removeSelectedSymptom(symptomName, symptom_id);
             }
         });
     });
 }
-
 
 // Function to clear existing suggestions
 function clearSuggestions() {
@@ -127,12 +99,6 @@ function addSelectedSymptom(symptomName, symptom_id) {
         selectedSymptom_ids.push(symptom_id);
     }
 
-    // Log the updated arrays
-    console.log("Added Symptom Name:", symptomName);
-    console.log("Added Symptom ID:", symptom_id);
-    console.log("Selected Symptoms Array:", selectedSymptoms);
-    console.log("Selected Symptom IDs Array:", selectedSymptom_ids);
-
     updateSelectedSymptomsUI();
 }
 
@@ -140,12 +106,6 @@ function addSelectedSymptom(symptomName, symptom_id) {
 function removeSelectedSymptom(symptomName, symptom_id) {
     selectedSymptoms = selectedSymptoms.filter(symptom => symptom !== symptomName);
     selectedSymptom_ids = selectedSymptom_ids.filter(id => id !== symptom_id);
-
-    // Log the updated arrays
-    console.log("Removed Symptom Name:", symptomName);
-    console.log("Removed Symptom ID:", symptom_id);
-    console.log("Selected Symptoms Array After Removal:", selectedSymptoms);
-    console.log("Selected Symptom IDs Array After Removal:", selectedSymptom_ids);
 
     updateSelectedSymptomsUI();
 }

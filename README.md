@@ -25,8 +25,6 @@ This project aims to build a machine learning model that predicts potential dise
 
 The main purpose of this project is to provide users with a more accurate and reliable disease prediction tool compared to generic online searches (e.g., Google). By offering evidence-based predictions, the model aims to reduce patient anxiety caused by inaccurate or overly broad search results, thereby improving user confidence and promoting better health outcomes.
 
-![Web Application]()
-
 ---
 
 ## Technologies Used
@@ -88,7 +86,6 @@ symptoms-analyzer
 │   ├── js
 │   │   ├── config.js
 │   │   ├── matches.js
-│   │   ├── matches2.js
 │   │   └── search.js
 │   └── index.html
 ├── resources
@@ -100,10 +97,13 @@ symptoms-analyzer
 │   │   ├── dummy_diseases.json
 │   │   ├── dummy_matches.json
 │   │   └── dummy_symptoms.json
+│   ├── images
+│   │   ├── webapp.png
+│   │   └── wireframe.png
 │   ├── model_iterations
 │   │   ├── model_iteration_1.ipynb
 │   │   └── model_iteration_2.ipynb
-│   └── wireframe.png
+│   └── requirements.txt
 └── README.md
 ```
 

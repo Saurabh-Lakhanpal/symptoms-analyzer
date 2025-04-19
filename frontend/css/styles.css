@@ -27,13 +27,6 @@ html, body {
     align-items: center;
 }
 
-/* .title {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-} */
-
 .title {
     position: absolute;
     top: 20px;
@@ -168,7 +161,6 @@ html, body {
 
 .matches {
     width: 40%;
-    font-size: 1.2em;
     display: flex;
     flex-direction: column; 
     align-items: center;
@@ -197,6 +189,8 @@ html, body {
 }
 
 .symptoms-box {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 80%;
     background-color: #E9E6D7;
@@ -204,13 +198,12 @@ html, body {
     color: #0B2B62;
     text-align: center;
     font-size: 1.2em;
-    display: flex;
-    flex-direction: column; /* Stack disease name and description vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    align-items: top;
+    justify-content: left;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 10px;
+
 }
 
 
@@ -264,11 +257,3 @@ html, body {
     display: inline; 
     margin-right: 5px; 
 }
-
-.disease-description, .symptoms-box {
-    font-size: 20px; /* Match font size */
-    font-family: Arial, sans-serif; /* Ensure same font */
-    text-align: center;
-}
-
-
