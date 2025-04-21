@@ -145,4 +145,6 @@ node js
 ---
 
 ### Project Presentation
-[Presentation Link](resources/Project 4 Slides.pdf)
+- [Presentation Link](resources/Project 4 Slides.pdf)
+
+
