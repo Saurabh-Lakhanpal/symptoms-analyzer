@@ -145,6 +145,6 @@ node js
 ---
 
 ### Project Presentation
-![Presentation Link](symptoms-analyzer/resources/Project 4 Slides.pdf)
+[Presentation Link](symptoms-analyzer/resources/Project 4 Slides.pdf)
 
 
