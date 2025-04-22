@@ -135,16 +135,3 @@ psycopg2 2.9.10
 node js
 ```
 
----
-
-### Project Team
-- [Evan Gowans](https://www.linkedin.com/in/evan-gowans/)
-- [Melanie Liao](https://www.linkedin.com/in/melanie-liao-998832165/)
-- [Saurabh Lakhanpal](https://www.linkedin.com/in/lakhanpal-saurabh/)
-
----
-
-### Project Presentation
-[Presenetation Slides](resources/Project%204%20Slides.pdf)
-
-
